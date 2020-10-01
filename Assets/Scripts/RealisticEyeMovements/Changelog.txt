@@ -1,0 +1,104 @@
+Changelog
+
+
+2.0.2
+Minor tweaks and fixes.
+Updated UMA preset.
+
+2.0.1
+Internal bugfixes.
+
+1.9.9
+Improved idle looking around when the character moves around.
+EyeWidenOrSquint: squinting is now also supported for eyelid control via blendshapes.
+Blink speed can be controlled via a parameter.
+Two new events you can subscribe to in LookTargetController: OnPlayerEntersPersonalSpace and OnLookAwayFromShyness.
+Fix: The head now also moves around when EyeControl is set to None.
+Fix: The character now also blinks and looks around idly when there is no LookTargetController component.
+Fix for VR setups when the character is enabled later at runtime only.
+Fix: Limit Head Angle slider works again.
+
+1.9.8
+Added slider for blinking speed
+Minor internal improvements
+
+1.9.7
+Improved head dynamics
+Added preset for MCS (Morph3D) males
+Fixed issue with Unity 2017.1 predefines
+
+1.9.6
+Added option to call Update functions externally, for complex setups using FinalIK.
+Improved eye blinking animation
+Added support for MCS (Morph3D) characters
+Improved looking when character walks
+
+1.9.5
+Added preset for MakeHuman 1.1 default rig
+Fixed exporting preset when no blendshapes are used
+Fixed issue when using both FinalIK's LookAt and FullBodyBiped components
+Added OnStartLookingAtPlayer and OnStopLookingAtPlayer events
+
+1.9.4
+Support for head bone assignment for rigs that don't use Humanoid Mecanim or Final-IK
+Fixed Webplayer
+Fixed issue with Final-IK when using long spine chains in LookAtIK
+
+1.9.3
+Improved the head movement smoothing.
+Fixed setup when using non-Mecanim rig with Final-IK
+Added checks for eyelid bone assignment
+
+1.9.2
+Fixed error messages when timescale is set to 0.
+
+1.9.1
+Fixed slow blinking for blendshapes (blinking when eyes sweep more than 25 degrees)
+Fixed changing look target when nervousness is set to higher value.
+Added support for Final IK.
+Added setting „Keep Target Even When Lost“
+Split „Max Eye Horiz Angle“ into two angles, one towards the nose and one away from it.
+Added support for 3rd person perspective games.
+Blendshapes configurations are now saved by blendshape name, not blendshape index, so you don't have to reconfigure when you modify the number of blendshapes in the 3D modelling software.
+
+1.9
+You can now export and import presets. There are premade presets for Mixamo, Autodesk Character Generator, MakeHuman, and UMA.
+
+1.8
+For eyelid control with bones, the position of the bones is now saved as well (before only the rotation was saved). This makes it easier to set up rigs like those from Autodesk Character Generator.
+New demo scene: you can switch between a character made with MakeHuman, Autodesk Character Generator, and Mixamo.
+Head speed slider: lets you adjust the head turning speed.
+Head latency (how much later the head starts turning than the eyes when looking at a new target) is now exposed in the API.
+Fixed bug in look duration when calling LookAtPoiDirectly.
+Fixed bug with eyeWiden slider.
+
+1.7
+Adapted to native VR support in Unity 5.1
+
+1.6
+Fixed eye angles when the head is tilted.
+Fixed errors when loading a new scene while the avatar is retained.
+
+1.5
+Updated for new Oculus SDK.
+
+1.4
+Added control Eye Widen Or Squint to eyelids when eyelids are controlled by bones.
+
+1.3
+Fixed demo scene.
+
+1.2
+Added two new positions to save for eyes and eyelids: Looking Up and Looking Down instead of relying on hardcoded values
+New parameter for limiting horizontal eye movement
+New parameter for limiting head rotation limits
+New parameter for cross-eye prevention
+New parameter for nervousness
+New parameter for personal space
+
+1.1
+new blink control: minBlinkTime and maxBlinkTime
+checkbox to disable macro saccades
+checkbox to show sightlines in editor
+settings for maximum up and down eye angles
+adjusted head and eye tracking after they jumped to a new target

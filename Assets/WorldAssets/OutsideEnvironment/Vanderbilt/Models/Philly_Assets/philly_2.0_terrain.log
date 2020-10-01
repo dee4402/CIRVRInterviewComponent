@@ -1,0 +1,57 @@
+EXPORT LOG / CityEngine 2011.2.01251158
+---------------------------------------------------
+
+export started at: Thu Jul 19 15:40:44 2012
+export completed at: Thu Jul 19 15:40:58 2012
+export duration: 13.8 seconds
+
+EXPORT SETTINGS
+    format:                default
+    location:              C:\Users\jww2y\CityEngine\Example_Philadelphia__2011_2\models
+    base name:             philly_2.0_terrain
+    export content:        2 (0 = models only, 1 = fallback to shape, 2 = shapes only)
+    file granularity:      0 (0 = single file (or split by file budget), 1 = file per initial shape)
+    file size budget:      524288000
+    mesh granularity:      1 (0 = as generated, 1 = mesh per material, 2 = use instances of inserted assets) 
+    vertex precision:      0.00100
+    normal precision:      0.00100
+    texcoord precision:    0.00010
+    merge vertices:        1
+    merge normals:         1
+    merge texcoords:       1
+    triangulate:           0
+    reproject texcoords:   0
+    vertex indexing:       0 (0 = allow shared vertices, 1 = force separate vertices)
+    normals type:          0 (0 = use vertex normals, 1 = use face normals (flat))
+    normals indexing:      0 (0 = allow shared normals, 1 = force separate normals)
+    write texcoords:       1 (0 = no texcoords, 1 = first layer, 2 = all layers)
+    write materials:       1
+    collect textures:      1
+    file type:             1 (0 = ascii, 1 = binary)
+    embed textures:        0
+    write master file:     0
+    master group name:     CityEngineSceneRoot
+    write cam data:        1
+    batch behavior:        0 (0 = normal, 1 = skip existing files, 2 = dry run)
+
+INPUT STATS
+    number of initial shapes      = 1
+    number of generated shapes    = 1
+    number of generated meshes    = 1
+    number of generated materials = 1
+
+OUTPUT STATS
+    written files: 1
+    written materials: 1
+    written meshes (total polygons): 1 (1046529)
+    mesh names (polygons):
+            0: 'CityEngineShapeMaterial' (1046529)
+
+INPUT REPORT
+    collected/generated initial shapes:
+            0: OK    : basemap                                  OID: a61bd3af-3486-11b2-ae5a-00bed9a60fab
+
+OUTPUT REPORT
+    written files & status:
+            0: OK:                        C:\Users\jww2y\CityEngine\Example_Philadelphia__2011_2\models\philly_2.0_terrain_0.fbx
+

@@ -1,0 +1,2757 @@
+fileFormatVersion: 2
+guid: ac3614207710c2742bcc880b402dfbdb
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: antenna_AntennaPart
+    100002: antenna_AntennaPart 1
+    100004: antenna_AntennaPart 10
+    100006: antenna_AntennaPart 11
+    100008: antenna_AntennaPart 12
+    100010: antenna_AntennaPart 13
+    100012: antenna_AntennaPart 14
+    100014: antenna_AntennaPart 15
+    100016: antenna_AntennaPart 16
+    100018: antenna_AntennaPart 17
+    100020: antenna_AntennaPart 18
+    100022: antenna_AntennaPart 19
+    100024: antenna_AntennaPart 2
+    100026: antenna_AntennaPart 20
+    100028: antenna_AntennaPart 21
+    100030: antenna_AntennaPart 3
+    100032: antenna_AntennaPart 4
+    100034: antenna_AntennaPart 5
+    100036: antenna_AntennaPart 6
+    100038: antenna_AntennaPart 7
+    100040: antenna_AntennaPart 8
+    100042: antenna_AntennaPart 9
+    100044: Asphalt
+    100046: Asphalt 1
+    100048: Asphalt 2
+    100050: Asphalt 3
+    100052: Asphalt 4
+    100054: Asphalt 5
+    100056: Asphalt 6
+    100058: Asphalt 7
+    100060: Asphalt 8
+    100062: BlindFacadeGF
+    100064: BlindFacadeGF 1
+    100066: BlindFacadeTextured
+    100068: BlindFacadeTextured 1
+    100070: BridgeMaterial
+    100072: BridgeMaterial 1
+    100074: BridgeMaterial 2
+    100076: CityEngineMaterial
+    100078: Curbs
+    100080: Door
+    100082: Door 1
+    100084: Door 2
+    100086: Facade
+    100088: Facade 1
+    100090: Facade 10
+    100092: Facade 11
+    100094: Facade 12
+    100096: Facade 13
+    100098: Facade 14
+    100100: Facade 15
+    100102: Facade 16
+    100104: Facade 17
+    100106: Facade 18
+    100108: Facade 19
+    100110: Facade 2
+    100112: Facade 20
+    100114: Facade 21
+    100116: Facade 22
+    100118: Facade 23
+    100120: Facade 24
+    100122: Facade 25
+    100124: Facade 26
+    100126: Facade 27
+    100128: Facade 28
+    100130: Facade 29
+    100132: Facade 3
+    100134: Facade 30
+    100136: Facade 31
+    100138: Facade 32
+    100140: Facade 33
+    100142: Facade 34
+    100144: Facade 35
+    100146: Facade 36
+    100148: Facade 37
+    100150: Facade 38
+    100152: Facade 39
+    100154: Facade 4
+    100156: Facade 40
+    100158: Facade 41
+    100160: Facade 42
+    100162: Facade 43
+    100164: Facade 44
+    100166: Facade 45
+    100168: Facade 46
+    100170: Facade 47
+    100172: Facade 48
+    100174: Facade 49
+    100176: Facade 5
+    100178: Facade 50
+    100180: Facade 51
+    100182: Facade 52
+    100184: Facade 53
+    100186: Facade 54
+    100188: Facade 55
+    100190: Facade 56
+    100192: Facade 57
+    100194: Facade 58
+    100196: Facade 59
+    100198: Facade 6
+    100200: Facade 60
+    100202: Facade 61
+    100204: Facade 62
+    100206: Facade 63
+    100208: Facade 64
+    100210: Facade 65
+    100212: Facade 66
+    100214: Facade 67
+    100216: Facade 68
+    100218: Facade 69
+    100220: Facade 7
+    100222: Facade 70
+    100224: Facade 71
+    100226: Facade 72
+    100228: Facade 73
+    100230: Facade 8
+    100232: Facade 9
+    100234: FacadeColor
+    100236: FacadeColor 1
+    100238: FacadeColor 10
+    100240: FacadeColor 11
+    100242: FacadeColor 12
+    100244: FacadeColor 13
+    100246: FacadeColor 14
+    100248: FacadeColor 15
+    100250: FacadeColor 2
+    100252: FacadeColor 3
+    100254: FacadeColor 4
+    100256: FacadeColor 5
+    100258: FacadeColor 6
+    100260: FacadeColor 7
+    100262: FacadeColor 8
+    100264: FacadeColor 9
+    100266: FacadeSets
+    100268: FacadeSets 1
+    100270: FacadeSets 10
+    100272: FacadeSets 11
+    100274: FacadeSets 12
+    100276: FacadeSets 13
+    100278: FacadeSets 14
+    100280: FacadeSets 15
+    100282: FacadeSets 16
+    100284: FacadeSets 17
+    100286: FacadeSets 18
+    100288: FacadeSets 19
+    100290: FacadeSets 2
+    100292: FacadeSets 3
+    100294: FacadeSets 4
+    100296: FacadeSets 5
+    100298: FacadeSets 6
+    100300: FacadeSets 7
+    100302: FacadeSets 8
+    100304: FacadeSets 9
+    100306: FacadeTexture
+    100308: FacadeTexture 1
+    100310: FacadeTexture 10
+    100312: FacadeTexture 11
+    100314: FacadeTexture 12
+    100316: FacadeTexture 13
+    100318: FacadeTexture 14
+    100320: FacadeTexture 15
+    100322: FacadeTexture 16
+    100324: FacadeTexture 17
+    100326: FacadeTexture 18
+    100328: FacadeTexture 19
+    100330: FacadeTexture 2
+    100332: FacadeTexture 20
+    100334: FacadeTexture 21
+    100336: FacadeTexture 22
+    100338: FacadeTexture 23
+    100340: FacadeTexture 24
+    100342: FacadeTexture 25
+    100344: FacadeTexture 26
+    100346: FacadeTexture 27
+    100348: FacadeTexture 28
+    100350: FacadeTexture 3
+    100352: FacadeTexture 4
+    100354: FacadeTexture 5
+    100356: FacadeTexture 6
+    100358: FacadeTexture 7
+    100360: FacadeTexture 8
+    100362: FacadeTexture 9
+    100364: flatroof_BottomTexture
+    100366: flatroof_BottomTexture 1
+    100368: flatroof_BottomTexture 2
+    100370: flatroof_LoftRoofTexture
+    100372: flatroof_LoftRoofTexture 1
+    100374: flatroof_Pipes
+    100376: flatroof_Pipes 1
+    100378: flatroof_Pipes 2
+    100380: flatroof_Pipes 3
+    100382: flatroof_RoofTexture
+    100384: flatroof_RoofTexture 1
+    100386: flatroof_RoofTexture 2
+    100388: flatroof_Ventilation
+    100390: FlatRoofTexture
+    100392: FlatRoofTexture 1
+    100394: FlatRoofTexture 10
+    100396: FlatRoofTexture 11
+    100398: FlatRoofTexture 12
+    100400: FlatRoofTexture 13
+    100402: FlatRoofTexture 14
+    100404: FlatRoofTexture 15
+    100406: FlatRoofTexture 16
+    100408: FlatRoofTexture 17
+    100410: FlatRoofTexture 18
+    100412: FlatRoofTexture 2
+    100414: FlatRoofTexture 3
+    100416: FlatRoofTexture 4
+    100418: FlatRoofTexture 5
+    100420: FlatRoofTexture 6
+    100422: FlatRoofTexture 7
+    100424: FlatRoofTexture 8
+    100426: FlatRoofTexture 9
+    100428: Ground
+    100430: lambert2SG
+    100432: lambert3SG
+    100434: Parisian_Roof_Chimney
+    100436: Parisian_Roof_Chimney 1
+    100438: Parisian_Roof_Chimney 2
+    100440: Parisian_Roof_MansardWindows
+    100442: Parisian_Roof_MansardWindows 1
+    100444: Parisian_Roof_MansardWindows 2
+    100446: Parisian_Roof_MansardWindows 3
+    100448: Parisian_Roof_MansardWindows 4
+    100450: Parisian_Roof_MansardWindows 5
+    100452: Parisian_Roof_RoofCovering
+    100454: Parisian_Roof_RoofCovering 1
+    100456: Parisian_Roof_RoofCovering 2
+    100458: Parisian_Roof_RoofCovering 3
+    100460: Parisian_Roof_RoofCovering 4
+    100462: Parisian_Roof_RoofCovering 5
+    100464: Parisian_Roof_RoofTerraceFloor
+    100466: ParkingLot
+    100468: ParkingLot 1
+    100470: ParkingLot 10
+    100472: ParkingLot 11
+    100474: ParkingLot 12
+    100476: ParkingLot 13
+    100478: ParkingLot 14
+    100480: ParkingLot 15
+    100482: ParkingLot 16
+    100484: ParkingLot 17
+    100486: ParkingLot 18
+    100488: ParkingLot 19
+    100490: ParkingLot 2
+    100492: ParkingLot 20
+    100494: ParkingLot 21
+    100496: ParkingLot 22
+    100498: ParkingLot 23
+    100500: ParkingLot 24
+    100502: ParkingLot 25
+    100504: ParkingLot 3
+    100506: ParkingLot 4
+    100508: ParkingLot 5
+    100510: ParkingLot 6
+    100512: ParkingLot 7
+    100514: ParkingLot 8
+    100516: ParkingLot 9
+    100518: //RootNode
+    100520: PlatformSides
+    100522: PlatformTop
+    100524: Railing
+    100526: Railing 1
+    100528: Railing 2
+    100530: Railing 3
+    100532: RailingMaterial
+    100534: RailingMaterial 1
+    100536: RailingMaterial 2
+    100538: RailingMaterial 3
+    100540: RailingMaterial 4
+    100542: RailingMaterial 5
+    100544: RailingMaterial 6
+    100546: RailingMaterial 7
+    100548: RailingMaterial 8
+    100550: RailMaterial
+    100552: Roof
+    100554: Roof 1
+    100556: RoofPlane
+    100558: RoofPlane 1
+    100560: RoofPlane 10
+    100562: RoofPlane 11
+    100564: RoofPlane 12
+    100566: RoofPlane 13
+    100568: RoofPlane 14
+    100570: RoofPlane 15
+    100572: RoofPlane 16
+    100574: RoofPlane 17
+    100576: RoofPlane 18
+    100578: RoofPlane 19
+    100580: RoofPlane 2
+    100582: RoofPlane 20
+    100584: RoofPlane 21
+    100586: RoofPlane 22
+    100588: RoofPlane 23
+    100590: RoofPlane 24
+    100592: RoofPlane 25
+    100594: RoofPlane 26
+    100596: RoofPlane 27
+    100598: RoofPlane 28
+    100600: RoofPlane 29
+    100602: RoofPlane 3
+    100604: RoofPlane 30
+    100606: RoofPlane 31
+    100608: RoofPlane 32
+    100610: RoofPlane 33
+    100612: RoofPlane 34
+    100614: RoofPlane 35
+    100616: RoofPlane 36
+    100618: RoofPlane 37
+    100620: RoofPlane 38
+    100622: RoofPlane 39
+    100624: RoofPlane 4
+    100626: RoofPlane 40
+    100628: RoofPlane 41
+    100630: RoofPlane 42
+    100632: RoofPlane 43
+    100634: RoofPlane 44
+    100636: RoofPlane 45
+    100638: RoofPlane 46
+    100640: RoofPlane 47
+    100642: RoofPlane 48
+    100644: RoofPlane 49
+    100646: RoofPlane 5
+    100648: RoofPlane 50
+    100650: RoofPlane 51
+    100652: RoofPlane 52
+    100654: RoofPlane 53
+    100656: RoofPlane 54
+    100658: RoofPlane 55
+    100660: RoofPlane 56
+    100662: RoofPlane 57
+    100664: RoofPlane 58
+    100666: RoofPlane 59
+    100668: RoofPlane 6
+    100670: RoofPlane 60
+    100672: RoofPlane 61
+    100674: RoofPlane 62
+    100676: RoofPlane 63
+    100678: RoofPlane 64
+    100680: RoofPlane 65
+    100682: RoofPlane 66
+    100684: RoofPlane 67
+    100686: RoofPlane 7
+    100688: RoofPlane 8
+    100690: RoofPlane 9
+    100692: VehicleAsset
+    100694: VehicleAsset 1
+    100696: VehicleAsset 10
+    100698: VehicleAsset 11
+    100700: VehicleAsset 12
+    100702: VehicleAsset 13
+    100704: VehicleAsset 14
+    100706: VehicleAsset 15
+    100708: VehicleAsset 16
+    100710: VehicleAsset 17
+    100712: VehicleAsset 18
+    100714: VehicleAsset 19
+    100716: VehicleAsset 2
+    100718: VehicleAsset 20
+    100720: VehicleAsset 21
+    100722: VehicleAsset 22
+    100724: VehicleAsset 23
+    100726: VehicleAsset 24
+    100728: VehicleAsset 25
+    100730: VehicleAsset 26
+    100732: VehicleAsset 27
+    100734: VehicleAsset 28
+    100736: VehicleAsset 29
+    100738: VehicleAsset 3
+    100740: VehicleAsset 30
+    100742: VehicleAsset 31
+    100744: VehicleAsset 32
+    100746: VehicleAsset 33
+    100748: VehicleAsset 34
+    100750: VehicleAsset 35
+    100752: VehicleAsset 36
+    100754: VehicleAsset 37
+    100756: VehicleAsset 38
+    100758: VehicleAsset 39
+    100760: VehicleAsset 4
+    100762: VehicleAsset 40
+    100764: VehicleAsset 41
+    100766: VehicleAsset 42
+    100768: VehicleAsset 43
+    100770: VehicleAsset 44
+    100772: VehicleAsset 45
+    100774: VehicleAsset 46
+    100776: VehicleAsset 47
+    100778: VehicleAsset 48
+    100780: VehicleAsset 49
+    100782: VehicleAsset 5
+    100784: VehicleAsset 50
+    100786: VehicleAsset 6
+    100788: VehicleAsset 7
+    100790: VehicleAsset 8
+    100792: VehicleAsset 9
+    100794: Wall
+    100796: Wall 1
+    100798: Wall 2
+    100800: Wall 3
+    100802: WallMaterial
+    100804: WallMaterial 1
+    100806: WallMaterial 2
+    100808: WallMaterial 3
+    100810: WallMaterial 4
+    100812: WallMaterial 5
+    100814: WallMaterial 6
+    100816: WallMaterial 7
+    100818: Window
+    100820: Window 1
+    100822: Window 10
+    100824: Window 11
+    100826: Window 12
+    100828: Window 13
+    100830: Window 14
+    100832: Window 15
+    100834: Window 16
+    100836: Window 17
+    100838: Window 18
+    100840: Window 19
+    100842: Window 2
+    100844: Window 20
+    100846: Window 21
+    100848: Window 22
+    100850: Window 23
+    100852: Window 24
+    100854: Window 25
+    100856: Window 26
+    100858: Window 27
+    100860: Window 3
+    100862: Window 4
+    100864: Window 5
+    100866: Window 6
+    100868: Window 7
+    100870: Window 8
+    100872: Window 9
+    100874: YardGround
+    100876: YardGround 1
+    100878: YardGround 2
+    100880: YardGround 3
+    100882: YardGround 4
+    100884: YardGround 5
+    100886: YardGround 6
+    100888: YardGround 7
+    400000: antenna_AntennaPart
+    400002: antenna_AntennaPart 1
+    400004: antenna_AntennaPart 10
+    400006: antenna_AntennaPart 11
+    400008: antenna_AntennaPart 12
+    400010: antenna_AntennaPart 13
+    400012: antenna_AntennaPart 14
+    400014: antenna_AntennaPart 15
+    400016: antenna_AntennaPart 16
+    400018: antenna_AntennaPart 17
+    400020: antenna_AntennaPart 18
+    400022: antenna_AntennaPart 19
+    400024: antenna_AntennaPart 2
+    400026: antenna_AntennaPart 20
+    400028: antenna_AntennaPart 21
+    400030: antenna_AntennaPart 3
+    400032: antenna_AntennaPart 4
+    400034: antenna_AntennaPart 5
+    400036: antenna_AntennaPart 6
+    400038: antenna_AntennaPart 7
+    400040: antenna_AntennaPart 8
+    400042: antenna_AntennaPart 9
+    400044: Asphalt
+    400046: Asphalt 1
+    400048: Asphalt 2
+    400050: Asphalt 3
+    400052: Asphalt 4
+    400054: Asphalt 5
+    400056: Asphalt 6
+    400058: Asphalt 7
+    400060: Asphalt 8
+    400062: BlindFacadeGF
+    400064: BlindFacadeGF 1
+    400066: BlindFacadeTextured
+    400068: BlindFacadeTextured 1
+    400070: BridgeMaterial
+    400072: BridgeMaterial 1
+    400074: BridgeMaterial 2
+    400076: CityEngineMaterial
+    400078: Curbs
+    400080: Door
+    400082: Door 1
+    400084: Door 2
+    400086: Facade
+    400088: Facade 1
+    400090: Facade 10
+    400092: Facade 11
+    400094: Facade 12
+    400096: Facade 13
+    400098: Facade 14
+    400100: Facade 15
+    400102: Facade 16
+    400104: Facade 17
+    400106: Facade 18
+    400108: Facade 19
+    400110: Facade 2
+    400112: Facade 20
+    400114: Facade 21
+    400116: Facade 22
+    400118: Facade 23
+    400120: Facade 24
+    400122: Facade 25
+    400124: Facade 26
+    400126: Facade 27
+    400128: Facade 28
+    400130: Facade 29
+    400132: Facade 3
+    400134: Facade 30
+    400136: Facade 31
+    400138: Facade 32
+    400140: Facade 33
+    400142: Facade 34
+    400144: Facade 35
+    400146: Facade 36
+    400148: Facade 37
+    400150: Facade 38
+    400152: Facade 39
+    400154: Facade 4
+    400156: Facade 40
+    400158: Facade 41
+    400160: Facade 42
+    400162: Facade 43
+    400164: Facade 44
+    400166: Facade 45
+    400168: Facade 46
+    400170: Facade 47
+    400172: Facade 48
+    400174: Facade 49
+    400176: Facade 5
+    400178: Facade 50
+    400180: Facade 51
+    400182: Facade 52
+    400184: Facade 53
+    400186: Facade 54
+    400188: Facade 55
+    400190: Facade 56
+    400192: Facade 57
+    400194: Facade 58
+    400196: Facade 59
+    400198: Facade 6
+    400200: Facade 60
+    400202: Facade 61
+    400204: Facade 62
+    400206: Facade 63
+    400208: Facade 64
+    400210: Facade 65
+    400212: Facade 66
+    400214: Facade 67
+    400216: Facade 68
+    400218: Facade 69
+    400220: Facade 7
+    400222: Facade 70
+    400224: Facade 71
+    400226: Facade 72
+    400228: Facade 73
+    400230: Facade 8
+    400232: Facade 9
+    400234: FacadeColor
+    400236: FacadeColor 1
+    400238: FacadeColor 10
+    400240: FacadeColor 11
+    400242: FacadeColor 12
+    400244: FacadeColor 13
+    400246: FacadeColor 14
+    400248: FacadeColor 15
+    400250: FacadeColor 2
+    400252: FacadeColor 3
+    400254: FacadeColor 4
+    400256: FacadeColor 5
+    400258: FacadeColor 6
+    400260: FacadeColor 7
+    400262: FacadeColor 8
+    400264: FacadeColor 9
+    400266: FacadeSets
+    400268: FacadeSets 1
+    400270: FacadeSets 10
+    400272: FacadeSets 11
+    400274: FacadeSets 12
+    400276: FacadeSets 13
+    400278: FacadeSets 14
+    400280: FacadeSets 15
+    400282: FacadeSets 16
+    400284: FacadeSets 17
+    400286: FacadeSets 18
+    400288: FacadeSets 19
+    400290: FacadeSets 2
+    400292: FacadeSets 3
+    400294: FacadeSets 4
+    400296: FacadeSets 5
+    400298: FacadeSets 6
+    400300: FacadeSets 7
+    400302: FacadeSets 8
+    400304: FacadeSets 9
+    400306: FacadeTexture
+    400308: FacadeTexture 1
+    400310: FacadeTexture 10
+    400312: FacadeTexture 11
+    400314: FacadeTexture 12
+    400316: FacadeTexture 13
+    400318: FacadeTexture 14
+    400320: FacadeTexture 15
+    400322: FacadeTexture 16
+    400324: FacadeTexture 17
+    400326: FacadeTexture 18
+    400328: FacadeTexture 19
+    400330: FacadeTexture 2
+    400332: FacadeTexture 20
+    400334: FacadeTexture 21
+    400336: FacadeTexture 22
+    400338: FacadeTexture 23
+    400340: FacadeTexture 24
+    400342: FacadeTexture 25
+    400344: FacadeTexture 26
+    400346: FacadeTexture 27
+    400348: FacadeTexture 28
+    400350: FacadeTexture 3
+    400352: FacadeTexture 4
+    400354: FacadeTexture 5
+    400356: FacadeTexture 6
+    400358: FacadeTexture 7
+    400360: FacadeTexture 8
+    400362: FacadeTexture 9
+    400364: flatroof_BottomTexture
+    400366: flatroof_BottomTexture 1
+    400368: flatroof_BottomTexture 2
+    400370: flatroof_LoftRoofTexture
+    400372: flatroof_LoftRoofTexture 1
+    400374: flatroof_Pipes
+    400376: flatroof_Pipes 1
+    400378: flatroof_Pipes 2
+    400380: flatroof_Pipes 3
+    400382: flatroof_RoofTexture
+    400384: flatroof_RoofTexture 1
+    400386: flatroof_RoofTexture 2
+    400388: flatroof_Ventilation
+    400390: FlatRoofTexture
+    400392: FlatRoofTexture 1
+    400394: FlatRoofTexture 10
+    400396: FlatRoofTexture 11
+    400398: FlatRoofTexture 12
+    400400: FlatRoofTexture 13
+    400402: FlatRoofTexture 14
+    400404: FlatRoofTexture 15
+    400406: FlatRoofTexture 16
+    400408: FlatRoofTexture 17
+    400410: FlatRoofTexture 18
+    400412: FlatRoofTexture 2
+    400414: FlatRoofTexture 3
+    400416: FlatRoofTexture 4
+    400418: FlatRoofTexture 5
+    400420: FlatRoofTexture 6
+    400422: FlatRoofTexture 7
+    400424: FlatRoofTexture 8
+    400426: FlatRoofTexture 9
+    400428: Ground
+    400430: lambert2SG
+    400432: lambert3SG
+    400434: Parisian_Roof_Chimney
+    400436: Parisian_Roof_Chimney 1
+    400438: Parisian_Roof_Chimney 2
+    400440: Parisian_Roof_MansardWindows
+    400442: Parisian_Roof_MansardWindows 1
+    400444: Parisian_Roof_MansardWindows 2
+    400446: Parisian_Roof_MansardWindows 3
+    400448: Parisian_Roof_MansardWindows 4
+    400450: Parisian_Roof_MansardWindows 5
+    400452: Parisian_Roof_RoofCovering
+    400454: Parisian_Roof_RoofCovering 1
+    400456: Parisian_Roof_RoofCovering 2
+    400458: Parisian_Roof_RoofCovering 3
+    400460: Parisian_Roof_RoofCovering 4
+    400462: Parisian_Roof_RoofCovering 5
+    400464: Parisian_Roof_RoofTerraceFloor
+    400466: ParkingLot
+    400468: ParkingLot 1
+    400470: ParkingLot 10
+    400472: ParkingLot 11
+    400474: ParkingLot 12
+    400476: ParkingLot 13
+    400478: ParkingLot 14
+    400480: ParkingLot 15
+    400482: ParkingLot 16
+    400484: ParkingLot 17
+    400486: ParkingLot 18
+    400488: ParkingLot 19
+    400490: ParkingLot 2
+    400492: ParkingLot 20
+    400494: ParkingLot 21
+    400496: ParkingLot 22
+    400498: ParkingLot 23
+    400500: ParkingLot 24
+    400502: ParkingLot 25
+    400504: ParkingLot 3
+    400506: ParkingLot 4
+    400508: ParkingLot 5
+    400510: ParkingLot 6
+    400512: ParkingLot 7
+    400514: ParkingLot 8
+    400516: ParkingLot 9
+    400518: //RootNode
+    400520: PlatformSides
+    400522: PlatformTop
+    400524: Railing
+    400526: Railing 1
+    400528: Railing 2
+    400530: Railing 3
+    400532: RailingMaterial
+    400534: RailingMaterial 1
+    400536: RailingMaterial 2
+    400538: RailingMaterial 3
+    400540: RailingMaterial 4
+    400542: RailingMaterial 5
+    400544: RailingMaterial 6
+    400546: RailingMaterial 7
+    400548: RailingMaterial 8
+    400550: RailMaterial
+    400552: Roof
+    400554: Roof 1
+    400556: RoofPlane
+    400558: RoofPlane 1
+    400560: RoofPlane 10
+    400562: RoofPlane 11
+    400564: RoofPlane 12
+    400566: RoofPlane 13
+    400568: RoofPlane 14
+    400570: RoofPlane 15
+    400572: RoofPlane 16
+    400574: RoofPlane 17
+    400576: RoofPlane 18
+    400578: RoofPlane 19
+    400580: RoofPlane 2
+    400582: RoofPlane 20
+    400584: RoofPlane 21
+    400586: RoofPlane 22
+    400588: RoofPlane 23
+    400590: RoofPlane 24
+    400592: RoofPlane 25
+    400594: RoofPlane 26
+    400596: RoofPlane 27
+    400598: RoofPlane 28
+    400600: RoofPlane 29
+    400602: RoofPlane 3
+    400604: RoofPlane 30
+    400606: RoofPlane 31
+    400608: RoofPlane 32
+    400610: RoofPlane 33
+    400612: RoofPlane 34
+    400614: RoofPlane 35
+    400616: RoofPlane 36
+    400618: RoofPlane 37
+    400620: RoofPlane 38
+    400622: RoofPlane 39
+    400624: RoofPlane 4
+    400626: RoofPlane 40
+    400628: RoofPlane 41
+    400630: RoofPlane 42
+    400632: RoofPlane 43
+    400634: RoofPlane 44
+    400636: RoofPlane 45
+    400638: RoofPlane 46
+    400640: RoofPlane 47
+    400642: RoofPlane 48
+    400644: RoofPlane 49
+    400646: RoofPlane 5
+    400648: RoofPlane 50
+    400650: RoofPlane 51
+    400652: RoofPlane 52
+    400654: RoofPlane 53
+    400656: RoofPlane 54
+    400658: RoofPlane 55
+    400660: RoofPlane 56
+    400662: RoofPlane 57
+    400664: RoofPlane 58
+    400666: RoofPlane 59
+    400668: RoofPlane 6
+    400670: RoofPlane 60
+    400672: RoofPlane 61
+    400674: RoofPlane 62
+    400676: RoofPlane 63
+    400678: RoofPlane 64
+    400680: RoofPlane 65
+    400682: RoofPlane 66
+    400684: RoofPlane 67
+    400686: RoofPlane 7
+    400688: RoofPlane 8
+    400690: RoofPlane 9
+    400692: VehicleAsset
+    400694: VehicleAsset 1
+    400696: VehicleAsset 10
+    400698: VehicleAsset 11
+    400700: VehicleAsset 12
+    400702: VehicleAsset 13
+    400704: VehicleAsset 14
+    400706: VehicleAsset 15
+    400708: VehicleAsset 16
+    400710: VehicleAsset 17
+    400712: VehicleAsset 18
+    400714: VehicleAsset 19
+    400716: VehicleAsset 2
+    400718: VehicleAsset 20
+    400720: VehicleAsset 21
+    400722: VehicleAsset 22
+    400724: VehicleAsset 23
+    400726: VehicleAsset 24
+    400728: VehicleAsset 25
+    400730: VehicleAsset 26
+    400732: VehicleAsset 27
+    400734: VehicleAsset 28
+    400736: VehicleAsset 29
+    400738: VehicleAsset 3
+    400740: VehicleAsset 30
+    400742: VehicleAsset 31
+    400744: VehicleAsset 32
+    400746: VehicleAsset 33
+    400748: VehicleAsset 34
+    400750: VehicleAsset 35
+    400752: VehicleAsset 36
+    400754: VehicleAsset 37
+    400756: VehicleAsset 38
+    400758: VehicleAsset 39
+    400760: VehicleAsset 4
+    400762: VehicleAsset 40
+    400764: VehicleAsset 41
+    400766: VehicleAsset 42
+    400768: VehicleAsset 43
+    400770: VehicleAsset 44
+    400772: VehicleAsset 45
+    400774: VehicleAsset 46
+    400776: VehicleAsset 47
+    400778: VehicleAsset 48
+    400780: VehicleAsset 49
+    400782: VehicleAsset 5
+    400784: VehicleAsset 50
+    400786: VehicleAsset 6
+    400788: VehicleAsset 7
+    400790: VehicleAsset 8
+    400792: VehicleAsset 9
+    400794: Wall
+    400796: Wall 1
+    400798: Wall 2
+    400800: Wall 3
+    400802: WallMaterial
+    400804: WallMaterial 1
+    400806: WallMaterial 2
+    400808: WallMaterial 3
+    400810: WallMaterial 4
+    400812: WallMaterial 5
+    400814: WallMaterial 6
+    400816: WallMaterial 7
+    400818: Window
+    400820: Window 1
+    400822: Window 10
+    400824: Window 11
+    400826: Window 12
+    400828: Window 13
+    400830: Window 14
+    400832: Window 15
+    400834: Window 16
+    400836: Window 17
+    400838: Window 18
+    400840: Window 19
+    400842: Window 2
+    400844: Window 20
+    400846: Window 21
+    400848: Window 22
+    400850: Window 23
+    400852: Window 24
+    400854: Window 25
+    400856: Window 26
+    400858: Window 27
+    400860: Window 3
+    400862: Window 4
+    400864: Window 5
+    400866: Window 6
+    400868: Window 7
+    400870: Window 8
+    400872: Window 9
+    400874: YardGround
+    400876: YardGround 1
+    400878: YardGround 2
+    400880: YardGround 3
+    400882: YardGround 4
+    400884: YardGround 5
+    400886: YardGround 6
+    400888: YardGround 7
+    2100000: lambert2SG_mat
+    2100002: lambert3SG_mat
+    2100004: BridgeMaterial_mat
+    2100006: RailMaterial_mat
+    2100008: BridgeMaterial_2_mat
+    2100010: Curbs_mat
+    2100012: BridgeMaterial_1_mat
+    2100014: Asphalt_mat
+    2100016: Asphalt_6_mat
+    2100018: Asphalt_3_mat
+    2100020: Asphalt_1_mat
+    2100022: Asphalt_2_mat
+    2100024: VehicleAsset_25_mat
+    2100026: VehicleAsset_18_mat
+    2100028: VehicleAsset_8_mat
+    2100030: VehicleAsset_40_mat
+    2100032: VehicleAsset_7_mat
+    2100034: VehicleAsset_32_mat
+    2100036: VehicleAsset_31_mat
+    2100038: VehicleAsset_23_mat
+    2100040: VehicleAsset_37_mat
+    2100042: VehicleAsset_1_mat
+    2100044: VehicleAsset_47_mat
+    2100046: VehicleAsset_14_mat
+    2100048: VehicleAsset_46_mat
+    2100050: VehicleAsset_13_mat
+    2100052: VehicleAsset_24_mat
+    2100054: VehicleAsset_19_mat
+    2100056: VehicleAsset_33_mat
+    2100058: VehicleAsset_22_mat
+    2100060: VehicleAsset_44_mat
+    2100062: VehicleAsset_43_mat
+    2100064: VehicleAsset_6_mat
+    2100066: VehicleAsset_5_mat
+    2100068: VehicleAsset_17_mat
+    2100070: VehicleAsset_16_mat
+    2100072: VehicleAsset_27_mat
+    2100074: VehicleAsset_39_mat
+    2100076: VehicleAsset_38_mat
+    2100078: VehicleAsset_42_mat
+    2100080: VehicleAsset_30_mat
+    2100082: VehicleAsset_29_mat
+    2100084: VehicleAsset_15_mat
+    2100086: VehicleAsset_28_mat
+    2100088: VehicleAsset_11_mat
+    2100090: VehicleAsset_3_mat
+    2100092: VehicleAsset_mat
+    2100094: VehicleAsset_10_mat
+    2100096: VehicleAsset_9_mat
+    2100098: FacadeTexture_3_mat
+    2100100: FlatRoofTexture_5_mat
+    2100102: FlatRoofTexture_4_mat
+    2100104: FlatRoofTexture_13_mat
+    2100106: FlatRoofTexture_2_mat
+    2100108: ParkingLot_8_mat
+    2100110: ParkingLot_13_mat
+    2100112: FacadeTexture_8_mat
+    2100114: FlatRoofTexture_mat
+    2100116: FlatRoofTexture_3_mat
+    2100118: ParkingLot_18_mat
+    2100120: FacadeTexture_2_mat
+    2100122: FlatRoofTexture_9_mat
+    2100124: FlatRoofTexture_1_mat
+    2100126: FlatRoofTexture_7_mat
+    2100128: FlatRoofTexture_10_mat
+    2100130: FacadeTexture_9_mat
+    2100132: RoofPlane_48_mat
+    2100134: ParkingLot_2_mat
+    2100136: FacadeTexture_10_mat
+    2100138: ParkingLot_3_mat
+    2100140: FacadeTexture_22_mat
+    2100142: FacadeTexture_17_mat
+    2100144: RoofPlane_66_mat
+    2100146: ParkingLot_19_mat
+    2100148: FacadeTexture_21_mat
+    2100150: RoofPlane_59_mat
+    2100152: ParkingLot_mat
+    2100154: FacadeTexture_7_mat
+    2100156: ParkingLot_6_mat
+    2100158: ParkingLot_9_mat
+    2100160: FacadeTexture_1_mat
+    2100162: RoofPlane_45_mat
+    2100164: FacadeTexture_23_mat
+    2100166: FacadeTexture_5_mat
+    2100168: RoofPlane_9_mat
+    2100170: FacadeTexture_11_mat
+    2100172: RoofPlane_37_mat
+    2100174: FacadeTexture_mat
+    2100176: ParkingLot_23_mat
+    2100178: ParkingLot_11_mat
+    2100180: FacadeTexture_18_mat
+    2100182: ParkingLot_1_mat
+    2100184: ParkingLot_25_mat
+    2100186: FacadeTexture_15_mat
+    2100188: ParkingLot_4_mat
+    2100190: RoofPlane_12_mat
+    2100192: YardGround_7_mat
+    2100194: RoofPlane_47_mat
+    2100196: FacadeTexture_20_mat
+    2100198: RoofPlane_36_mat
+    2100200: RoofPlane_40_mat
+    2100202: FacadeTexture_24_mat
+    2100204: ParkingLot_5_mat
+    2100206: ParkingLot_20_mat
+    2100208: RoofPlane_67_mat
+    2100210: ParkingLot_12_mat
+    2100212: FacadeTexture_16_mat
+    2100214: RoofPlane_60_mat
+    2100216: FacadeTexture_14_mat
+    2100218: FacadeTexture_25_mat
+    2100220: ParkingLot_7_mat
+    2100222: RoofPlane_20_mat
+    2100224: RoofPlane_14_mat
+    2100226: Facade_41_mat
+    2100228: FacadeColor_3_mat
+    2100230: Facade_68_mat
+    2100232: CityEngineMaterial_mat
+    2100234: PlatformSides_mat
+    2100236: PlatformTop_mat
+    2100238: RailingMaterial_7_mat
+    2100240: RailingMaterial_8_mat
+    2100242: antenna_AntennaPart_19_mat
+    2100244: antenna_AntennaPart_21_mat
+    2100246: WallMaterial_6_mat
+    2100248: antenna_AntennaPart_20_mat
+    2100250: antenna_AntennaPart_18_mat
+    2100252: flatroof_RoofTexture_2_mat
+    2100254: flatroof_Pipes_3_mat
+    2100256: WallMaterial_7_mat
+    2100258: RailingMaterial_6_mat
+    2100260: flatroof_BottomTexture_2_mat
+    2100262: Ground_mat
+    2100264: RailingMaterial_5_mat
+    2100266: WallMaterial_3_mat
+    2100268: WallMaterial_4_mat
+    2100270: flatroof_BottomTexture_1_mat
+    2100272: flatroof_LoftRoofTexture_1_mat
+    2100274: antenna_AntennaPart_10_mat
+    2100276: flatroof_RoofTexture_1_mat
+    2100278: RailingMaterial_3_mat
+    2100280: WallMaterial_5_mat
+    2100282: antenna_AntennaPart_9_mat
+    2100284: antenna_AntennaPart_17_mat
+    2100286: flatroof_Pipes_2_mat
+    2100288: flatroof_Ventilation_mat
+    2100290: antenna_AntennaPart_14_mat
+    2100292: antenna_AntennaPart_16_mat
+    2100294: antenna_AntennaPart_15_mat
+    2100296: RailingMaterial_4_mat
+    2100298: antenna_AntennaPart_8_mat
+    2100300: antenna_AntennaPart_13_mat
+    2100302: antenna_AntennaPart_12_mat
+    2100304: antenna_AntennaPart_11_mat
+    2100306: Wall_3_mat
+    2100308: Window_19_mat
+    2100310: Window_20_mat
+    2100312: Window_21_mat
+    2100314: Window_25_mat
+    2100316: Window_26_mat
+    2100318: Window_22_mat
+    2100320: Window_27_mat
+    2100322: Window_24_mat
+    2100324: Window_23_mat
+    2100326: Door_2_mat
+    2100328: Roof_1_mat
+    2100330: Wall_2_mat
+    2100332: RoofPlane_18_mat
+    2100334: Facade_66_mat
+    2100336: FacadeColor_13_mat
+    2100338: Wall_1_mat
+    2100340: Window_15_mat
+    2100342: Window_10_mat
+    2100344: Window_17_mat
+    2100346: Window_11_mat
+    2100348: Window_12_mat
+    2100350: Window_14_mat
+    2100352: Window_18_mat
+    2100354: Window_13_mat
+    2100356: Window_16_mat
+    2100358: Door_1_mat
+    2100360: Roof_mat
+    2100362: flatroof_LoftRoofTexture_mat
+    2100364: flatroof_Pipes_mat
+    2100366: WallMaterial_1_mat
+    2100368: RailingMaterial_2_mat
+    2100370: flatroof_Pipes_1_mat
+    2100372: flatroof_BottomTexture_mat
+    2100374: WallMaterial_mat
+    2100376: RailingMaterial_mat
+    2100378: antenna_AntennaPart_5_mat
+    2100380: antenna_AntennaPart_mat
+    2100382: WallMaterial_2_mat
+    2100384: flatroof_RoofTexture_mat
+    2100386: antenna_AntennaPart_7_mat
+    2100388: antenna_AntennaPart_3_mat
+    2100390: antenna_AntennaPart_1_mat
+    2100392: antenna_AntennaPart_4_mat
+    2100394: antenna_AntennaPart_6_mat
+    2100396: RailingMaterial_1_mat
+    2100398: antenna_AntennaPart_2_mat
+    2100400: Wall_mat
+    2100402: Window_mat
+    2100404: Window_2_mat
+    2100406: Window_1_mat
+    2100408: Window_9_mat
+    2100410: Window_7_mat
+    2100412: Window_4_mat
+    2100414: Window_5_mat
+    2100416: Window_6_mat
+    2100418: Window_8_mat
+    2100420: Window_3_mat
+    2100422: Door_mat
+    2100424: FlatRoofTexture_12_mat
+    2100426: Facade_38_mat
+    2100428: FacadeColor_1_mat
+    2100430: FlatRoofTexture_6_mat
+    2100432: Facade_51_mat
+    2100434: FacadeColor_8_mat
+    2100436: FlatRoofTexture_8_mat
+    2100438: Facade_45_mat
+    2100440: FacadeColor_5_mat
+    2100442: FacadeColor_2_mat
+    2100444: FlatRoofTexture_14_mat
+    2100446: Facade_40_mat
+    2100448: FacadeColor_11_mat
+    2100450: Facade_61_mat
+    2100452: FacadeColor_6_mat
+    2100454: FlatRoofTexture_18_mat
+    2100456: Facade_48_mat
+    2100458: FlatRoofTexture_17_mat
+    2100460: Facade_59_mat
+    2100462: FacadeColor_10_mat
+    2100464: FlatRoofTexture_15_mat
+    2100466: FacadeColor_7_mat
+    2100468: Facade_50_mat
+    2100470: FlatRoofTexture_11_mat
+    2100472: RoofPlane_63_mat
+    2100474: RoofPlane_28_mat
+    2100476: FacadeTexture_13_mat
+    2100478: RoofPlane_42_mat
+    2100480: RoofPlane_34_mat
+    2100482: RoofPlane_46_mat
+    2100484: RoofPlane_44_mat
+    2100486: RoofPlane_27_mat
+    2100488: FacadeTexture_19_mat
+    2100490: RoofPlane_54_mat
+    2100492: RoofPlane_57_mat
+    2100494: FacadeTexture_4_mat
+    2100496: RoofPlane_11_mat
+    2100498: RoofPlane_21_mat
+    2100500: FlatRoofTexture_16_mat
+    2100502: FacadeColor_12_mat
+    2100504: Facade_64_mat
+    2100506: Facade_42_mat
+    2100508: Railing_mat
+    2100510: Railing_2_mat
+    2100512: Facade_57_mat
+    2100514: Facade_72_mat
+    2100516: FacadeColor_15_mat
+    2100518: Facade_55_mat
+    2100520: FacadeColor_9_mat
+    2100522: RoofPlane_23_mat
+    2100524: Facade_43_mat
+    2100526: Facade_37_mat
+    2100528: FacadeColor_mat
+    2100530: RoofPlane_31_mat
+    2100532: Facade_36_mat
+    2100534: RoofPlane_16_mat
+    2100536: Facade_47_mat
+    2100538: RoofPlane_41_mat
+    2100540: RoofPlane_19_mat
+    2100542: RoofPlane_30_mat
+    2100544: RoofPlane_26_mat
+    2100546: Facade_53_mat
+    2100548: Facade_54_mat
+    2100550: Railing_1_mat
+    2100552: FacadeTexture_6_mat
+    2100554: Facade_44_mat
+    2100556: FacadeColor_4_mat
+    2100558: Facade_62_mat
+    2100560: RoofPlane_25_mat
+    2100562: RoofPlane_7_mat
+    2100564: RoofPlane_39_mat
+    2100566: RoofPlane_64_mat
+    2100568: RoofPlane_38_mat
+    2100570: RoofPlane_35_mat
+    2100572: RoofPlane_17_mat
+    2100574: RoofPlane_50_mat
+    2100576: RoofPlane_10_mat
+    2100578: FacadeTexture_26_mat
+    2100580: RoofPlane_61_mat
+    2100582: RoofPlane_52_mat
+    2100584: RoofPlane_49_mat
+    2100586: FacadeTexture_28_mat
+    2100588: RoofPlane_53_mat
+    2100590: RoofPlane_65_mat
+    2100592: RoofPlane_62_mat
+    2100594: RoofPlane_51_mat
+    2100596: RoofPlane_29_mat
+    2100598: RoofPlane_58_mat
+    2100600: RoofPlane_56_mat
+    2100602: RoofPlane_55_mat
+    2100604: Facade_70_mat
+    2100606: FacadeColor_14_mat
+    2100608: Facade_71_mat
+    2100610: RoofPlane_32_mat
+    2100612: RoofPlane_24_mat
+    2100614: Facade_73_mat
+    2100616: Facade_56_mat
+    2100618: Facade_52_mat
+    2100620: Facade_65_mat
+    2100622: Facade_69_mat
+    2100624: Facade_39_mat
+    2100626: Facade_49_mat
+    2100628: Facade_46_mat
+    2100630: Facade_58_mat
+    2100632: Facade_63_mat
+    2100634: Railing_3_mat
+    2100636: Facade_67_mat
+    2100638: FacadeTexture_12_mat
+    2100640: ParkingLot_10_mat
+    2100642: RoofPlane_43_mat
+    2100644: RoofPlane_33_mat
+    2100646: ParkingLot_16_mat
+    2100648: ParkingLot_17_mat
+    2100650: Parisian_Roof_Chimney_2_mat
+    2100652: Parisian_Roof_Chimney_mat
+    2100654: Parisian_Roof_Chimney_1_mat
+    2100656: FacadeSets_19_mat
+    2100658: Parisian_Roof_RoofCovering_mat
+    2100660: Parisian_Roof_MansardWindows_5_mat
+    2100662: FacadeSets_18_mat
+    2100664: BlindFacadeGF_mat
+    2100666: FacadeSets_17_mat
+    2100668: Parisian_Roof_RoofCovering_5_mat
+    2100670: Parisian_Roof_MansardWindows_4_mat
+    2100672: FacadeSets_16_mat
+    2100674: FacadeSets_2_mat
+    2100676: BlindFacadeTextured_1_mat
+    2100678: BlindFacadeGF_1_mat
+    2100680: FacadeSets_15_mat
+    2100682: Parisian_Roof_RoofCovering_4_mat
+    2100684: Parisian_Roof_MansardWindows_1_mat
+    2100686: FacadeSets_14_mat
+    2100688: FacadeSets_13_mat
+    2100690: Parisian_Roof_RoofTerraceFloor_mat
+    2100692: FacadeSets_12_mat
+    2100694: FacadeSets_5_mat
+    2100696: FacadeSets_11_mat
+    2100698: Parisian_Roof_RoofCovering_3_mat
+    2100700: FacadeSets_10_mat
+    2100702: FacadeSets_9_mat
+    2100704: Parisian_Roof_MansardWindows_3_mat
+    2100706: FacadeSets_8_mat
+    2100708: FacadeSets_7_mat
+    2100710: Parisian_Roof_RoofCovering_2_mat
+    2100712: Parisian_Roof_MansardWindows_2_mat
+    2100714: FacadeSets_6_mat
+    2100716: FacadeSets_4_mat
+    2100718: Parisian_Roof_RoofCovering_1_mat
+    2100720: FacadeSets_3_mat
+    2100722: FacadeSets_1_mat
+    2100724: Parisian_Roof_MansardWindows_mat
+    2100726: FacadeSets_mat
+    2100728: BlindFacadeTextured_mat
+    2100730: ParkingLot_24_mat
+    2100732: RoofPlane_6_mat
+    2100734: FacadeTexture_27_mat
+    2100736: YardGround_5_mat
+    2100738: YardGround_6_mat
+    2100740: RoofPlane_8_mat
+    2100742: Facade_60_mat
+    2100744: RoofPlane_22_mat
+    2100746: ParkingLot_22_mat
+    2100748: ParkingLot_21_mat
+    2100750: ParkingLot_15_mat
+    2100752: ParkingLot_14_mat
+    2100754: RoofPlane_15_mat
+    2100756: YardGround_4_mat
+    2100758: YardGround_3_mat
+    2100760: YardGround_2_mat
+    2100762: YardGround_1_mat
+    2100764: RoofPlane_13_mat
+    2100766: YardGround_mat
+    2100768: Asphalt_8_mat
+    2100770: Asphalt_7_mat
+    2100772: VehicleAsset_50_mat
+    2100774: Asphalt_4_mat
+    2100776: VehicleAsset_34_mat
+    2100778: VehicleAsset_41_mat
+    2100780: Asphalt_5_mat
+    2100782: VehicleAsset_2_mat
+    2100784: VehicleAsset_36_mat
+    2100786: VehicleAsset_35_mat
+    2100788: VehicleAsset_51_mat
+    2100790: VehicleAsset_26_mat
+    2100792: VehicleAsset_12_mat
+    2100794: Facade_10_mat
+    2100796: RoofPlane_2_mat
+    2100798: RoofPlane_4_mat
+    2100800: Facade_6_mat
+    2100802: Facade_5_mat
+    2100804: RoofPlane_1_mat
+    2100806: RoofPlane_3_mat
+    2100808: RoofPlane_mat
+    2100810: Facade_mat
+    2100812: RoofPlane_5_mat
+    2100814: Facade_1_mat
+    2100816: Facade_2_mat
+    2100818: Facade_12_mat
+    2100820: Facade_19_mat
+    2100822: Facade_4_mat
+    2100824: Facade_3_mat
+    2100826: Facade_8_mat
+    2100828: Facade_14_mat
+    2100830: Facade_9_mat
+    2100832: Facade_13_mat
+    2100834: Facade_27_mat
+    2100836: Facade_25_mat
+    2100838: Facade_17_mat
+    2100840: Facade_16_mat
+    2100842: Facade_32_mat
+    2100844: Facade_26_mat
+    2100846: Facade_30_mat
+    2100848: Facade_18_mat
+    2100850: Facade_35_mat
+    2100852: Facade_34_mat
+    2100854: Facade_15_mat
+    2100856: Facade_21_mat
+    2100858: Facade_31_mat
+    2100860: Facade_33_mat
+    2100862: Facade_24_mat
+    2100864: Facade_29_mat
+    2100866: Facade_28_mat
+    2100868: Facade_23_mat
+    2100870: Facade_11_mat
+    2100872: Facade_22_mat
+    2100874: Facade_20_mat
+    2100876: Facade_7_mat
+    2100878: VehicleAsset_4_mat
+    2100880: VehicleAsset_21_mat
+    2100882: VehicleAsset_20_mat
+    2100884: VehicleAsset_49_mat
+    2100886: VehicleAsset_48_mat
+    2300000: antenna_AntennaPart
+    2300002: antenna_AntennaPart 1
+    2300004: antenna_AntennaPart 10
+    2300006: antenna_AntennaPart 11
+    2300008: antenna_AntennaPart 12
+    2300010: antenna_AntennaPart 13
+    2300012: antenna_AntennaPart 14
+    2300014: antenna_AntennaPart 15
+    2300016: antenna_AntennaPart 16
+    2300018: antenna_AntennaPart 17
+    2300020: antenna_AntennaPart 18
+    2300022: antenna_AntennaPart 19
+    2300024: antenna_AntennaPart 2
+    2300026: antenna_AntennaPart 20
+    2300028: antenna_AntennaPart 21
+    2300030: antenna_AntennaPart 3
+    2300032: antenna_AntennaPart 4
+    2300034: antenna_AntennaPart 5
+    2300036: antenna_AntennaPart 6
+    2300038: antenna_AntennaPart 7
+    2300040: antenna_AntennaPart 8
+    2300042: antenna_AntennaPart 9
+    2300044: Asphalt
+    2300046: Asphalt 1
+    2300048: Asphalt 2
+    2300050: Asphalt 3
+    2300052: Asphalt 4
+    2300054: Asphalt 5
+    2300056: Asphalt 6
+    2300058: Asphalt 7
+    2300060: Asphalt 8
+    2300062: BlindFacadeGF
+    2300064: BlindFacadeGF 1
+    2300066: BlindFacadeTextured
+    2300068: BlindFacadeTextured 1
+    2300070: BridgeMaterial
+    2300072: BridgeMaterial 1
+    2300074: BridgeMaterial 2
+    2300076: CityEngineMaterial
+    2300078: Curbs
+    2300080: Door
+    2300082: Door 1
+    2300084: Door 2
+    2300086: Facade
+    2300088: Facade 1
+    2300090: Facade 10
+    2300092: Facade 11
+    2300094: Facade 12
+    2300096: Facade 13
+    2300098: Facade 14
+    2300100: Facade 15
+    2300102: Facade 16
+    2300104: Facade 17
+    2300106: Facade 18
+    2300108: Facade 19
+    2300110: Facade 2
+    2300112: Facade 20
+    2300114: Facade 21
+    2300116: Facade 22
+    2300118: Facade 23
+    2300120: Facade 24
+    2300122: Facade 25
+    2300124: Facade 26
+    2300126: Facade 27
+    2300128: Facade 28
+    2300130: Facade 29
+    2300132: Facade 3
+    2300134: Facade 30
+    2300136: Facade 31
+    2300138: Facade 32
+    2300140: Facade 33
+    2300142: Facade 34
+    2300144: Facade 35
+    2300146: Facade 36
+    2300148: Facade 37
+    2300150: Facade 38
+    2300152: Facade 39
+    2300154: Facade 4
+    2300156: Facade 40
+    2300158: Facade 41
+    2300160: Facade 42
+    2300162: Facade 43
+    2300164: Facade 44
+    2300166: Facade 45
+    2300168: Facade 46
+    2300170: Facade 47
+    2300172: Facade 48
+    2300174: Facade 49
+    2300176: Facade 5
+    2300178: Facade 50
+    2300180: Facade 51
+    2300182: Facade 52
+    2300184: Facade 53
+    2300186: Facade 54
+    2300188: Facade 55
+    2300190: Facade 56
+    2300192: Facade 57
+    2300194: Facade 58
+    2300196: Facade 59
+    2300198: Facade 6
+    2300200: Facade 60
+    2300202: Facade 61
+    2300204: Facade 62
+    2300206: Facade 63
+    2300208: Facade 64
+    2300210: Facade 65
+    2300212: Facade 66
+    2300214: Facade 67
+    2300216: Facade 68
+    2300218: Facade 69
+    2300220: Facade 7
+    2300222: Facade 70
+    2300224: Facade 71
+    2300226: Facade 72
+    2300228: Facade 73
+    2300230: Facade 8
+    2300232: Facade 9
+    2300234: FacadeColor
+    2300236: FacadeColor 1
+    2300238: FacadeColor 10
+    2300240: FacadeColor 11
+    2300242: FacadeColor 12
+    2300244: FacadeColor 13
+    2300246: FacadeColor 14
+    2300248: FacadeColor 15
+    2300250: FacadeColor 2
+    2300252: FacadeColor 3
+    2300254: FacadeColor 4
+    2300256: FacadeColor 5
+    2300258: FacadeColor 6
+    2300260: FacadeColor 7
+    2300262: FacadeColor 8
+    2300264: FacadeColor 9
+    2300266: FacadeSets
+    2300268: FacadeSets 1
+    2300270: FacadeSets 10
+    2300272: FacadeSets 11
+    2300274: FacadeSets 12
+    2300276: FacadeSets 13
+    2300278: FacadeSets 14
+    2300280: FacadeSets 15
+    2300282: FacadeSets 16
+    2300284: FacadeSets 17
+    2300286: FacadeSets 18
+    2300288: FacadeSets 19
+    2300290: FacadeSets 2
+    2300292: FacadeSets 3
+    2300294: FacadeSets 4
+    2300296: FacadeSets 5
+    2300298: FacadeSets 6
+    2300300: FacadeSets 7
+    2300302: FacadeSets 8
+    2300304: FacadeSets 9
+    2300306: FacadeTexture
+    2300308: FacadeTexture 1
+    2300310: FacadeTexture 10
+    2300312: FacadeTexture 11
+    2300314: FacadeTexture 12
+    2300316: FacadeTexture 13
+    2300318: FacadeTexture 14
+    2300320: FacadeTexture 15
+    2300322: FacadeTexture 16
+    2300324: FacadeTexture 17
+    2300326: FacadeTexture 18
+    2300328: FacadeTexture 19
+    2300330: FacadeTexture 2
+    2300332: FacadeTexture 20
+    2300334: FacadeTexture 21
+    2300336: FacadeTexture 22
+    2300338: FacadeTexture 23
+    2300340: FacadeTexture 24
+    2300342: FacadeTexture 25
+    2300344: FacadeTexture 26
+    2300346: FacadeTexture 27
+    2300348: FacadeTexture 28
+    2300350: FacadeTexture 3
+    2300352: FacadeTexture 4
+    2300354: FacadeTexture 5
+    2300356: FacadeTexture 6
+    2300358: FacadeTexture 7
+    2300360: FacadeTexture 8
+    2300362: FacadeTexture 9
+    2300364: flatroof_BottomTexture
+    2300366: flatroof_BottomTexture 1
+    2300368: flatroof_BottomTexture 2
+    2300370: flatroof_LoftRoofTexture
+    2300372: flatroof_LoftRoofTexture 1
+    2300374: flatroof_Pipes
+    2300376: flatroof_Pipes 1
+    2300378: flatroof_Pipes 2
+    2300380: flatroof_Pipes 3
+    2300382: flatroof_RoofTexture
+    2300384: flatroof_RoofTexture 1
+    2300386: flatroof_RoofTexture 2
+    2300388: flatroof_Ventilation
+    2300390: FlatRoofTexture
+    2300392: FlatRoofTexture 1
+    2300394: FlatRoofTexture 10
+    2300396: FlatRoofTexture 11
+    2300398: FlatRoofTexture 12
+    2300400: FlatRoofTexture 13
+    2300402: FlatRoofTexture 14
+    2300404: FlatRoofTexture 15
+    2300406: FlatRoofTexture 16
+    2300408: FlatRoofTexture 17
+    2300410: FlatRoofTexture 18
+    2300412: FlatRoofTexture 2
+    2300414: FlatRoofTexture 3
+    2300416: FlatRoofTexture 4
+    2300418: FlatRoofTexture 5
+    2300420: FlatRoofTexture 6
+    2300422: FlatRoofTexture 7
+    2300424: FlatRoofTexture 8
+    2300426: FlatRoofTexture 9
+    2300428: Ground
+    2300430: lambert2SG
+    2300432: lambert3SG
+    2300434: Parisian_Roof_Chimney
+    2300436: Parisian_Roof_Chimney 1
+    2300438: Parisian_Roof_Chimney 2
+    2300440: Parisian_Roof_MansardWindows
+    2300442: Parisian_Roof_MansardWindows 1
+    2300444: Parisian_Roof_MansardWindows 2
+    2300446: Parisian_Roof_MansardWindows 3
+    2300448: Parisian_Roof_MansardWindows 4
+    2300450: Parisian_Roof_MansardWindows 5
+    2300452: Parisian_Roof_RoofCovering
+    2300454: Parisian_Roof_RoofCovering 1
+    2300456: Parisian_Roof_RoofCovering 2
+    2300458: Parisian_Roof_RoofCovering 3
+    2300460: Parisian_Roof_RoofCovering 4
+    2300462: Parisian_Roof_RoofCovering 5
+    2300464: Parisian_Roof_RoofTerraceFloor
+    2300466: ParkingLot
+    2300468: ParkingLot 1
+    2300470: ParkingLot 10
+    2300472: ParkingLot 11
+    2300474: ParkingLot 12
+    2300476: ParkingLot 13
+    2300478: ParkingLot 14
+    2300480: ParkingLot 15
+    2300482: ParkingLot 16
+    2300484: ParkingLot 17
+    2300486: ParkingLot 18
+    2300488: ParkingLot 19
+    2300490: ParkingLot 2
+    2300492: ParkingLot 20
+    2300494: ParkingLot 21
+    2300496: ParkingLot 22
+    2300498: ParkingLot 23
+    2300500: ParkingLot 24
+    2300502: ParkingLot 25
+    2300504: ParkingLot 3
+    2300506: ParkingLot 4
+    2300508: ParkingLot 5
+    2300510: ParkingLot 6
+    2300512: ParkingLot 7
+    2300514: ParkingLot 8
+    2300516: ParkingLot 9
+    2300518: PlatformSides
+    2300520: PlatformTop
+    2300522: Railing
+    2300524: Railing 1
+    2300526: Railing 2
+    2300528: Railing 3
+    2300530: RailingMaterial
+    2300532: RailingMaterial 1
+    2300534: RailingMaterial 2
+    2300536: RailingMaterial 3
+    2300538: RailingMaterial 4
+    2300540: RailingMaterial 5
+    2300542: RailingMaterial 6
+    2300544: RailingMaterial 7
+    2300546: RailingMaterial 8
+    2300548: RailMaterial
+    2300550: Roof
+    2300552: Roof 1
+    2300554: RoofPlane
+    2300556: RoofPlane 1
+    2300558: RoofPlane 10
+    2300560: RoofPlane 11
+    2300562: RoofPlane 12
+    2300564: RoofPlane 13
+    2300566: RoofPlane 14
+    2300568: RoofPlane 15
+    2300570: RoofPlane 16
+    2300572: RoofPlane 17
+    2300574: RoofPlane 18
+    2300576: RoofPlane 19
+    2300578: RoofPlane 2
+    2300580: RoofPlane 20
+    2300582: RoofPlane 21
+    2300584: RoofPlane 22
+    2300586: RoofPlane 23
+    2300588: RoofPlane 24
+    2300590: RoofPlane 25
+    2300592: RoofPlane 26
+    2300594: RoofPlane 27
+    2300596: RoofPlane 28
+    2300598: RoofPlane 29
+    2300600: RoofPlane 3
+    2300602: RoofPlane 30
+    2300604: RoofPlane 31
+    2300606: RoofPlane 32
+    2300608: RoofPlane 33
+    2300610: RoofPlane 34
+    2300612: RoofPlane 35
+    2300614: RoofPlane 36
+    2300616: RoofPlane 37
+    2300618: RoofPlane 38
+    2300620: RoofPlane 39
+    2300622: RoofPlane 4
+    2300624: RoofPlane 40
+    2300626: RoofPlane 41
+    2300628: RoofPlane 42
+    2300630: RoofPlane 43
+    2300632: RoofPlane 44
+    2300634: RoofPlane 45
+    2300636: RoofPlane 46
+    2300638: RoofPlane 47
+    2300640: RoofPlane 48
+    2300642: RoofPlane 49
+    2300644: RoofPlane 5
+    2300646: RoofPlane 50
+    2300648: RoofPlane 51
+    2300650: RoofPlane 52
+    2300652: RoofPlane 53
+    2300654: RoofPlane 54
+    2300656: RoofPlane 55
+    2300658: RoofPlane 56
+    2300660: RoofPlane 57
+    2300662: RoofPlane 58
+    2300664: RoofPlane 59
+    2300666: RoofPlane 6
+    2300668: RoofPlane 60
+    2300670: RoofPlane 61
+    2300672: RoofPlane 62
+    2300674: RoofPlane 63
+    2300676: RoofPlane 64
+    2300678: RoofPlane 65
+    2300680: RoofPlane 66
+    2300682: RoofPlane 67
+    2300684: RoofPlane 7
+    2300686: RoofPlane 8
+    2300688: RoofPlane 9
+    2300690: VehicleAsset
+    2300692: VehicleAsset 1
+    2300694: VehicleAsset 10
+    2300696: VehicleAsset 11
+    2300698: VehicleAsset 12
+    2300700: VehicleAsset 13
+    2300702: VehicleAsset 14
+    2300704: VehicleAsset 15
+    2300706: VehicleAsset 16
+    2300708: VehicleAsset 17
+    2300710: VehicleAsset 18
+    2300712: VehicleAsset 19
+    2300714: VehicleAsset 2
+    2300716: VehicleAsset 20
+    2300718: VehicleAsset 21
+    2300720: VehicleAsset 22
+    2300722: VehicleAsset 23
+    2300724: VehicleAsset 24
+    2300726: VehicleAsset 25
+    2300728: VehicleAsset 26
+    2300730: VehicleAsset 27
+    2300732: VehicleAsset 28
+    2300734: VehicleAsset 29
+    2300736: VehicleAsset 3
+    2300738: VehicleAsset 30
+    2300740: VehicleAsset 31
+    2300742: VehicleAsset 32
+    2300744: VehicleAsset 33
+    2300746: VehicleAsset 34
+    2300748: VehicleAsset 35
+    2300750: VehicleAsset 36
+    2300752: VehicleAsset 37
+    2300754: VehicleAsset 38
+    2300756: VehicleAsset 39
+    2300758: VehicleAsset 4
+    2300760: VehicleAsset 40
+    2300762: VehicleAsset 41
+    2300764: VehicleAsset 42
+    2300766: VehicleAsset 43
+    2300768: VehicleAsset 44
+    2300770: VehicleAsset 45
+    2300772: VehicleAsset 46
+    2300774: VehicleAsset 47
+    2300776: VehicleAsset 48
+    2300778: VehicleAsset 49
+    2300780: VehicleAsset 5
+    2300782: VehicleAsset 50
+    2300784: VehicleAsset 6
+    2300786: VehicleAsset 7
+    2300788: VehicleAsset 8
+    2300790: VehicleAsset 9
+    2300792: Wall
+    2300794: Wall 1
+    2300796: Wall 2
+    2300798: Wall 3
+    2300800: WallMaterial
+    2300802: WallMaterial 1
+    2300804: WallMaterial 2
+    2300806: WallMaterial 3
+    2300808: WallMaterial 4
+    2300810: WallMaterial 5
+    2300812: WallMaterial 6
+    2300814: WallMaterial 7
+    2300816: Window
+    2300818: Window 1
+    2300820: Window 10
+    2300822: Window 11
+    2300824: Window 12
+    2300826: Window 13
+    2300828: Window 14
+    2300830: Window 15
+    2300832: Window 16
+    2300834: Window 17
+    2300836: Window 18
+    2300838: Window 19
+    2300840: Window 2
+    2300842: Window 20
+    2300844: Window 21
+    2300846: Window 22
+    2300848: Window 23
+    2300850: Window 24
+    2300852: Window 25
+    2300854: Window 26
+    2300856: Window 27
+    2300858: Window 3
+    2300860: Window 4
+    2300862: Window 5
+    2300864: Window 6
+    2300866: Window 7
+    2300868: Window 8
+    2300870: Window 9
+    2300872: YardGround
+    2300874: YardGround 1
+    2300876: YardGround 2
+    2300878: YardGround 3
+    2300880: YardGround 4
+    2300882: YardGround 5
+    2300884: YardGround 6
+    2300886: YardGround 7
+    3300000: antenna_AntennaPart
+    3300002: antenna_AntennaPart 1
+    3300004: antenna_AntennaPart 10
+    3300006: antenna_AntennaPart 11
+    3300008: antenna_AntennaPart 12
+    3300010: antenna_AntennaPart 13
+    3300012: antenna_AntennaPart 14
+    3300014: antenna_AntennaPart 15
+    3300016: antenna_AntennaPart 16
+    3300018: antenna_AntennaPart 17
+    3300020: antenna_AntennaPart 18
+    3300022: antenna_AntennaPart 19
+    3300024: antenna_AntennaPart 2
+    3300026: antenna_AntennaPart 20
+    3300028: antenna_AntennaPart 21
+    3300030: antenna_AntennaPart 3
+    3300032: antenna_AntennaPart 4
+    3300034: antenna_AntennaPart 5
+    3300036: antenna_AntennaPart 6
+    3300038: antenna_AntennaPart 7
+    3300040: antenna_AntennaPart 8
+    3300042: antenna_AntennaPart 9
+    3300044: Asphalt
+    3300046: Asphalt 1
+    3300048: Asphalt 2
+    3300050: Asphalt 3
+    3300052: Asphalt 4
+    3300054: Asphalt 5
+    3300056: Asphalt 6
+    3300058: Asphalt 7
+    3300060: Asphalt 8
+    3300062: BlindFacadeGF
+    3300064: BlindFacadeGF 1
+    3300066: BlindFacadeTextured
+    3300068: BlindFacadeTextured 1
+    3300070: BridgeMaterial
+    3300072: BridgeMaterial 1
+    3300074: BridgeMaterial 2
+    3300076: CityEngineMaterial
+    3300078: Curbs
+    3300080: Door
+    3300082: Door 1
+    3300084: Door 2
+    3300086: Facade
+    3300088: Facade 1
+    3300090: Facade 10
+    3300092: Facade 11
+    3300094: Facade 12
+    3300096: Facade 13
+    3300098: Facade 14
+    3300100: Facade 15
+    3300102: Facade 16
+    3300104: Facade 17
+    3300106: Facade 18
+    3300108: Facade 19
+    3300110: Facade 2
+    3300112: Facade 20
+    3300114: Facade 21
+    3300116: Facade 22
+    3300118: Facade 23
+    3300120: Facade 24
+    3300122: Facade 25
+    3300124: Facade 26
+    3300126: Facade 27
+    3300128: Facade 28
+    3300130: Facade 29
+    3300132: Facade 3
+    3300134: Facade 30
+    3300136: Facade 31
+    3300138: Facade 32
+    3300140: Facade 33
+    3300142: Facade 34
+    3300144: Facade 35
+    3300146: Facade 36
+    3300148: Facade 37
+    3300150: Facade 38
+    3300152: Facade 39
+    3300154: Facade 4
+    3300156: Facade 40
+    3300158: Facade 41
+    3300160: Facade 42
+    3300162: Facade 43
+    3300164: Facade 44
+    3300166: Facade 45
+    3300168: Facade 46
+    3300170: Facade 47
+    3300172: Facade 48
+    3300174: Facade 49
+    3300176: Facade 5
+    3300178: Facade 50
+    3300180: Facade 51
+    3300182: Facade 52
+    3300184: Facade 53
+    3300186: Facade 54
+    3300188: Facade 55
+    3300190: Facade 56
+    3300192: Facade 57
+    3300194: Facade 58
+    3300196: Facade 59
+    3300198: Facade 6
+    3300200: Facade 60
+    3300202: Facade 61
+    3300204: Facade 62
+    3300206: Facade 63
+    3300208: Facade 64
+    3300210: Facade 65
+    3300212: Facade 66
+    3300214: Facade 67
+    3300216: Facade 68
+    3300218: Facade 69
+    3300220: Facade 7
+    3300222: Facade 70
+    3300224: Facade 71
+    3300226: Facade 72
+    3300228: Facade 73
+    3300230: Facade 8
+    3300232: Facade 9
+    3300234: FacadeColor
+    3300236: FacadeColor 1
+    3300238: FacadeColor 10
+    3300240: FacadeColor 11
+    3300242: FacadeColor 12
+    3300244: FacadeColor 13
+    3300246: FacadeColor 14
+    3300248: FacadeColor 15
+    3300250: FacadeColor 2
+    3300252: FacadeColor 3
+    3300254: FacadeColor 4
+    3300256: FacadeColor 5
+    3300258: FacadeColor 6
+    3300260: FacadeColor 7
+    3300262: FacadeColor 8
+    3300264: FacadeColor 9
+    3300266: FacadeSets
+    3300268: FacadeSets 1
+    3300270: FacadeSets 10
+    3300272: FacadeSets 11
+    3300274: FacadeSets 12
+    3300276: FacadeSets 13
+    3300278: FacadeSets 14
+    3300280: FacadeSets 15
+    3300282: FacadeSets 16
+    3300284: FacadeSets 17
+    3300286: FacadeSets 18
+    3300288: FacadeSets 19
+    3300290: FacadeSets 2
+    3300292: FacadeSets 3
+    3300294: FacadeSets 4
+    3300296: FacadeSets 5
+    3300298: FacadeSets 6
+    3300300: FacadeSets 7
+    3300302: FacadeSets 8
+    3300304: FacadeSets 9
+    3300306: FacadeTexture
+    3300308: FacadeTexture 1
+    3300310: FacadeTexture 10
+    3300312: FacadeTexture 11
+    3300314: FacadeTexture 12
+    3300316: FacadeTexture 13
+    3300318: FacadeTexture 14
+    3300320: FacadeTexture 15
+    3300322: FacadeTexture 16
+    3300324: FacadeTexture 17
+    3300326: FacadeTexture 18
+    3300328: FacadeTexture 19
+    3300330: FacadeTexture 2
+    3300332: FacadeTexture 20
+    3300334: FacadeTexture 21
+    3300336: FacadeTexture 22
+    3300338: FacadeTexture 23
+    3300340: FacadeTexture 24
+    3300342: FacadeTexture 25
+    3300344: FacadeTexture 26
+    3300346: FacadeTexture 27
+    3300348: FacadeTexture 28
+    3300350: FacadeTexture 3
+    3300352: FacadeTexture 4
+    3300354: FacadeTexture 5
+    3300356: FacadeTexture 6
+    3300358: FacadeTexture 7
+    3300360: FacadeTexture 8
+    3300362: FacadeTexture 9
+    3300364: flatroof_BottomTexture
+    3300366: flatroof_BottomTexture 1
+    3300368: flatroof_BottomTexture 2
+    3300370: flatroof_LoftRoofTexture
+    3300372: flatroof_LoftRoofTexture 1
+    3300374: flatroof_Pipes
+    3300376: flatroof_Pipes 1
+    3300378: flatroof_Pipes 2
+    3300380: flatroof_Pipes 3
+    3300382: flatroof_RoofTexture
+    3300384: flatroof_RoofTexture 1
+    3300386: flatroof_RoofTexture 2
+    3300388: flatroof_Ventilation
+    3300390: FlatRoofTexture
+    3300392: FlatRoofTexture 1
+    3300394: FlatRoofTexture 10
+    3300396: FlatRoofTexture 11
+    3300398: FlatRoofTexture 12
+    3300400: FlatRoofTexture 13
+    3300402: FlatRoofTexture 14
+    3300404: FlatRoofTexture 15
+    3300406: FlatRoofTexture 16
+    3300408: FlatRoofTexture 17
+    3300410: FlatRoofTexture 18
+    3300412: FlatRoofTexture 2
+    3300414: FlatRoofTexture 3
+    3300416: FlatRoofTexture 4
+    3300418: FlatRoofTexture 5
+    3300420: FlatRoofTexture 6
+    3300422: FlatRoofTexture 7
+    3300424: FlatRoofTexture 8
+    3300426: FlatRoofTexture 9
+    3300428: Ground
+    3300430: lambert2SG
+    3300432: lambert3SG
+    3300434: Parisian_Roof_Chimney
+    3300436: Parisian_Roof_Chimney 1
+    3300438: Parisian_Roof_Chimney 2
+    3300440: Parisian_Roof_MansardWindows
+    3300442: Parisian_Roof_MansardWindows 1
+    3300444: Parisian_Roof_MansardWindows 2
+    3300446: Parisian_Roof_MansardWindows 3
+    3300448: Parisian_Roof_MansardWindows 4
+    3300450: Parisian_Roof_MansardWindows 5
+    3300452: Parisian_Roof_RoofCovering
+    3300454: Parisian_Roof_RoofCovering 1
+    3300456: Parisian_Roof_RoofCovering 2
+    3300458: Parisian_Roof_RoofCovering 3
+    3300460: Parisian_Roof_RoofCovering 4
+    3300462: Parisian_Roof_RoofCovering 5
+    3300464: Parisian_Roof_RoofTerraceFloor
+    3300466: ParkingLot
+    3300468: ParkingLot 1
+    3300470: ParkingLot 10
+    3300472: ParkingLot 11
+    3300474: ParkingLot 12
+    3300476: ParkingLot 13
+    3300478: ParkingLot 14
+    3300480: ParkingLot 15
+    3300482: ParkingLot 16
+    3300484: ParkingLot 17
+    3300486: ParkingLot 18
+    3300488: ParkingLot 19
+    3300490: ParkingLot 2
+    3300492: ParkingLot 20
+    3300494: ParkingLot 21
+    3300496: ParkingLot 22
+    3300498: ParkingLot 23
+    3300500: ParkingLot 24
+    3300502: ParkingLot 25
+    3300504: ParkingLot 3
+    3300506: ParkingLot 4
+    3300508: ParkingLot 5
+    3300510: ParkingLot 6
+    3300512: ParkingLot 7
+    3300514: ParkingLot 8
+    3300516: ParkingLot 9
+    3300518: PlatformSides
+    3300520: PlatformTop
+    3300522: Railing
+    3300524: Railing 1
+    3300526: Railing 2
+    3300528: Railing 3
+    3300530: RailingMaterial
+    3300532: RailingMaterial 1
+    3300534: RailingMaterial 2
+    3300536: RailingMaterial 3
+    3300538: RailingMaterial 4
+    3300540: RailingMaterial 5
+    3300542: RailingMaterial 6
+    3300544: RailingMaterial 7
+    3300546: RailingMaterial 8
+    3300548: RailMaterial
+    3300550: Roof
+    3300552: Roof 1
+    3300554: RoofPlane
+    3300556: RoofPlane 1
+    3300558: RoofPlane 10
+    3300560: RoofPlane 11
+    3300562: RoofPlane 12
+    3300564: RoofPlane 13
+    3300566: RoofPlane 14
+    3300568: RoofPlane 15
+    3300570: RoofPlane 16
+    3300572: RoofPlane 17
+    3300574: RoofPlane 18
+    3300576: RoofPlane 19
+    3300578: RoofPlane 2
+    3300580: RoofPlane 20
+    3300582: RoofPlane 21
+    3300584: RoofPlane 22
+    3300586: RoofPlane 23
+    3300588: RoofPlane 24
+    3300590: RoofPlane 25
+    3300592: RoofPlane 26
+    3300594: RoofPlane 27
+    3300596: RoofPlane 28
+    3300598: RoofPlane 29
+    3300600: RoofPlane 3
+    3300602: RoofPlane 30
+    3300604: RoofPlane 31
+    3300606: RoofPlane 32
+    3300608: RoofPlane 33
+    3300610: RoofPlane 34
+    3300612: RoofPlane 35
+    3300614: RoofPlane 36
+    3300616: RoofPlane 37
+    3300618: RoofPlane 38
+    3300620: RoofPlane 39
+    3300622: RoofPlane 4
+    3300624: RoofPlane 40
+    3300626: RoofPlane 41
+    3300628: RoofPlane 42
+    3300630: RoofPlane 43
+    3300632: RoofPlane 44
+    3300634: RoofPlane 45
+    3300636: RoofPlane 46
+    3300638: RoofPlane 47
+    3300640: RoofPlane 48
+    3300642: RoofPlane 49
+    3300644: RoofPlane 5
+    3300646: RoofPlane 50
+    3300648: RoofPlane 51
+    3300650: RoofPlane 52
+    3300652: RoofPlane 53
+    3300654: RoofPlane 54
+    3300656: RoofPlane 55
+    3300658: RoofPlane 56
+    3300660: RoofPlane 57
+    3300662: RoofPlane 58
+    3300664: RoofPlane 59
+    3300666: RoofPlane 6
+    3300668: RoofPlane 60
+    3300670: RoofPlane 61
+    3300672: RoofPlane 62
+    3300674: RoofPlane 63
+    3300676: RoofPlane 64
+    3300678: RoofPlane 65
+    3300680: RoofPlane 66
+    3300682: RoofPlane 67
+    3300684: RoofPlane 7
+    3300686: RoofPlane 8
+    3300688: RoofPlane 9
+    3300690: VehicleAsset
+    3300692: VehicleAsset 1
+    3300694: VehicleAsset 10
+    3300696: VehicleAsset 11
+    3300698: VehicleAsset 12
+    3300700: VehicleAsset 13
+    3300702: VehicleAsset 14
+    3300704: VehicleAsset 15
+    3300706: VehicleAsset 16
+    3300708: VehicleAsset 17
+    3300710: VehicleAsset 18
+    3300712: VehicleAsset 19
+    3300714: VehicleAsset 2
+    3300716: VehicleAsset 20
+    3300718: VehicleAsset 21
+    3300720: VehicleAsset 22
+    3300722: VehicleAsset 23
+    3300724: VehicleAsset 24
+    3300726: VehicleAsset 25
+    3300728: VehicleAsset 26
+    3300730: VehicleAsset 27
+    3300732: VehicleAsset 28
+    3300734: VehicleAsset 29
+    3300736: VehicleAsset 3
+    3300738: VehicleAsset 30
+    3300740: VehicleAsset 31
+    3300742: VehicleAsset 32
+    3300744: VehicleAsset 33
+    3300746: VehicleAsset 34
+    3300748: VehicleAsset 35
+    3300750: VehicleAsset 36
+    3300752: VehicleAsset 37
+    3300754: VehicleAsset 38
+    3300756: VehicleAsset 39
+    3300758: VehicleAsset 4
+    3300760: VehicleAsset 40
+    3300762: VehicleAsset 41
+    3300764: VehicleAsset 42
+    3300766: VehicleAsset 43
+    3300768: VehicleAsset 44
+    3300770: VehicleAsset 45
+    3300772: VehicleAsset 46
+    3300774: VehicleAsset 47
+    3300776: VehicleAsset 48
+    3300778: VehicleAsset 49
+    3300780: VehicleAsset 5
+    3300782: VehicleAsset 50
+    3300784: VehicleAsset 6
+    3300786: VehicleAsset 7
+    3300788: VehicleAsset 8
+    3300790: VehicleAsset 9
+    3300792: Wall
+    3300794: Wall 1
+    3300796: Wall 2
+    3300798: Wall 3
+    3300800: WallMaterial
+    3300802: WallMaterial 1
+    3300804: WallMaterial 2
+    3300806: WallMaterial 3
+    3300808: WallMaterial 4
+    3300810: WallMaterial 5
+    3300812: WallMaterial 6
+    3300814: WallMaterial 7
+    3300816: Window
+    3300818: Window 1
+    3300820: Window 10
+    3300822: Window 11
+    3300824: Window 12
+    3300826: Window 13
+    3300828: Window 14
+    3300830: Window 15
+    3300832: Window 16
+    3300834: Window 17
+    3300836: Window 18
+    3300838: Window 19
+    3300840: Window 2
+    3300842: Window 20
+    3300844: Window 21
+    3300846: Window 22
+    3300848: Window 23
+    3300850: Window 24
+    3300852: Window 25
+    3300854: Window 26
+    3300856: Window 27
+    3300858: Window 3
+    3300860: Window 4
+    3300862: Window 5
+    3300864: Window 6
+    3300866: Window 7
+    3300868: Window 8
+    3300870: Window 9
+    3300872: YardGround
+    3300874: YardGround 1
+    3300876: YardGround 2
+    3300878: YardGround 3
+    3300880: YardGround 4
+    3300882: YardGround 5
+    3300884: YardGround 6
+    3300886: YardGround 7
+    4300000: lambert2SG
+    4300002: lambert3SG
+    4300004: BridgeMaterial
+    4300006: RailMaterial
+    4300008: BridgeMaterial
+    4300010: Curbs
+    4300012: BridgeMaterial
+    4300014: Asphalt
+    4300016: Asphalt
+    4300018: Asphalt
+    4300020: Asphalt
+    4300022: Asphalt
+    4300024: VehicleAsset
+    4300026: VehicleAsset
+    4300028: VehicleAsset
+    4300030: VehicleAsset
+    4300032: VehicleAsset
+    4300034: VehicleAsset
+    4300036: VehicleAsset
+    4300038: VehicleAsset
+    4300040: VehicleAsset
+    4300042: VehicleAsset
+    4300044: VehicleAsset
+    4300046: VehicleAsset
+    4300048: VehicleAsset
+    4300050: VehicleAsset
+    4300052: VehicleAsset
+    4300054: VehicleAsset
+    4300056: VehicleAsset
+    4300058: VehicleAsset
+    4300060: VehicleAsset
+    4300062: VehicleAsset
+    4300064: VehicleAsset
+    4300066: VehicleAsset
+    4300068: VehicleAsset
+    4300070: VehicleAsset
+    4300072: VehicleAsset
+    4300074: VehicleAsset
+    4300076: VehicleAsset
+    4300078: VehicleAsset
+    4300080: VehicleAsset
+    4300082: VehicleAsset
+    4300084: VehicleAsset
+    4300086: VehicleAsset
+    4300088: VehicleAsset
+    4300090: VehicleAsset
+    4300092: VehicleAsset
+    4300094: VehicleAsset
+    4300096: VehicleAsset
+    4300098: FacadeTexture
+    4300100: FlatRoofTexture
+    4300102: FlatRoofTexture
+    4300104: FlatRoofTexture
+    4300106: FlatRoofTexture
+    4300108: ParkingLot
+    4300110: ParkingLot
+    4300112: FacadeTexture
+    4300114: FlatRoofTexture
+    4300116: FlatRoofTexture
+    4300118: ParkingLot
+    4300120: FacadeTexture
+    4300122: FlatRoofTexture
+    4300124: FlatRoofTexture
+    4300126: FlatRoofTexture
+    4300128: FlatRoofTexture
+    4300130: FacadeTexture
+    4300132: RoofPlane
+    4300134: ParkingLot
+    4300136: FacadeTexture
+    4300138: ParkingLot
+    4300140: FacadeTexture
+    4300142: FacadeTexture
+    4300144: RoofPlane
+    4300146: ParkingLot
+    4300148: FacadeTexture
+    4300150: RoofPlane
+    4300152: ParkingLot
+    4300154: FacadeTexture
+    4300156: ParkingLot
+    4300158: ParkingLot
+    4300160: FacadeTexture
+    4300162: RoofPlane
+    4300164: FacadeTexture
+    4300166: FacadeTexture
+    4300168: RoofPlane
+    4300170: FacadeTexture
+    4300172: RoofPlane
+    4300174: FacadeTexture
+    4300176: ParkingLot
+    4300178: ParkingLot
+    4300180: FacadeTexture
+    4300182: ParkingLot
+    4300184: ParkingLot
+    4300186: FacadeTexture
+    4300188: ParkingLot
+    4300190: RoofPlane
+    4300192: YardGround
+    4300194: RoofPlane
+    4300196: FacadeTexture
+    4300198: RoofPlane
+    4300200: RoofPlane
+    4300202: FacadeTexture
+    4300204: ParkingLot
+    4300206: ParkingLot
+    4300208: RoofPlane
+    4300210: ParkingLot
+    4300212: FacadeTexture
+    4300214: RoofPlane
+    4300216: FacadeTexture
+    4300218: FacadeTexture
+    4300220: ParkingLot
+    4300222: RoofPlane
+    4300224: RoofPlane
+    4300226: Facade
+    4300228: FacadeColor
+    4300230: Facade
+    4300232: CityEngineMaterial
+    4300234: PlatformSides
+    4300236: PlatformTop
+    4300238: RailingMaterial
+    4300240: RailingMaterial
+    4300242: antenna_AntennaPart
+    4300244: antenna_AntennaPart
+    4300246: WallMaterial
+    4300248: antenna_AntennaPart
+    4300250: antenna_AntennaPart
+    4300252: flatroof_RoofTexture
+    4300254: flatroof_Pipes
+    4300256: WallMaterial
+    4300258: RailingMaterial
+    4300260: flatroof_BottomTexture
+    4300262: Ground
+    4300264: RailingMaterial
+    4300266: WallMaterial
+    4300268: WallMaterial
+    4300270: flatroof_BottomTexture
+    4300272: flatroof_LoftRoofTexture
+    4300274: antenna_AntennaPart
+    4300276: flatroof_RoofTexture
+    4300278: RailingMaterial
+    4300280: WallMaterial
+    4300282: antenna_AntennaPart
+    4300284: antenna_AntennaPart
+    4300286: flatroof_Pipes
+    4300288: flatroof_Ventilation
+    4300290: antenna_AntennaPart
+    4300292: antenna_AntennaPart
+    4300294: antenna_AntennaPart
+    4300296: RailingMaterial
+    4300298: antenna_AntennaPart
+    4300300: antenna_AntennaPart
+    4300302: antenna_AntennaPart
+    4300304: antenna_AntennaPart
+    4300306: Wall
+    4300308: Window
+    4300310: Window
+    4300312: Window
+    4300314: Window
+    4300316: Window
+    4300318: Window
+    4300320: Window
+    4300322: Window
+    4300324: Window
+    4300326: Door
+    4300328: Roof
+    4300330: Wall
+    4300332: RoofPlane
+    4300334: Facade
+    4300336: FacadeColor
+    4300338: Wall
+    4300340: Window
+    4300342: Window
+    4300344: Window
+    4300346: Window
+    4300348: Window
+    4300350: Window
+    4300352: Window
+    4300354: Window
+    4300356: Window
+    4300358: Door
+    4300360: Roof
+    4300362: flatroof_LoftRoofTexture
+    4300364: flatroof_Pipes
+    4300366: WallMaterial
+    4300368: RailingMaterial
+    4300370: flatroof_Pipes
+    4300372: flatroof_BottomTexture
+    4300374: WallMaterial
+    4300376: RailingMaterial
+    4300378: antenna_AntennaPart
+    4300380: antenna_AntennaPart
+    4300382: WallMaterial
+    4300384: flatroof_RoofTexture
+    4300386: antenna_AntennaPart
+    4300388: antenna_AntennaPart
+    4300390: antenna_AntennaPart
+    4300392: antenna_AntennaPart
+    4300394: antenna_AntennaPart
+    4300396: RailingMaterial
+    4300398: antenna_AntennaPart
+    4300400: Wall
+    4300402: Window
+    4300404: Window
+    4300406: Window
+    4300408: Window
+    4300410: Window
+    4300412: Window
+    4300414: Window
+    4300416: Window
+    4300418: Window
+    4300420: Window
+    4300422: Door
+    4300424: FlatRoofTexture
+    4300426: Facade
+    4300428: FacadeColor
+    4300430: FlatRoofTexture
+    4300432: Facade
+    4300434: FacadeColor
+    4300436: FlatRoofTexture
+    4300438: Facade
+    4300440: FacadeColor
+    4300442: FacadeColor
+    4300444: FlatRoofTexture
+    4300446: Facade
+    4300448: FacadeColor
+    4300450: Facade
+    4300452: FacadeColor
+    4300454: FlatRoofTexture
+    4300456: Facade
+    4300458: FlatRoofTexture
+    4300460: Facade
+    4300462: FacadeColor
+    4300464: FlatRoofTexture
+    4300466: FacadeColor
+    4300468: Facade
+    4300470: FlatRoofTexture
+    4300472: RoofPlane
+    4300474: RoofPlane
+    4300476: FacadeTexture
+    4300478: RoofPlane
+    4300480: RoofPlane
+    4300482: RoofPlane
+    4300484: RoofPlane
+    4300486: RoofPlane
+    4300488: FacadeTexture
+    4300490: RoofPlane
+    4300492: RoofPlane
+    4300494: FacadeTexture
+    4300496: RoofPlane
+    4300498: RoofPlane
+    4300500: FlatRoofTexture
+    4300502: FacadeColor
+    4300504: Facade
+    4300506: Facade
+    4300508: Railing
+    4300510: Railing
+    4300512: Facade
+    4300514: Facade
+    4300516: FacadeColor
+    4300518: Facade
+    4300520: FacadeColor
+    4300522: RoofPlane
+    4300524: Facade
+    4300526: Facade
+    4300528: FacadeColor
+    4300530: RoofPlane
+    4300532: Facade
+    4300534: RoofPlane
+    4300536: Facade
+    4300538: RoofPlane
+    4300540: RoofPlane
+    4300542: RoofPlane
+    4300544: RoofPlane
+    4300546: Facade
+    4300548: Facade
+    4300550: Railing
+    4300552: FacadeTexture
+    4300554: Facade
+    4300556: FacadeColor
+    4300558: Facade
+    4300560: RoofPlane
+    4300562: RoofPlane
+    4300564: RoofPlane
+    4300566: RoofPlane
+    4300568: RoofPlane
+    4300570: RoofPlane
+    4300572: RoofPlane
+    4300574: RoofPlane
+    4300576: RoofPlane
+    4300578: FacadeTexture
+    4300580: RoofPlane
+    4300582: RoofPlane
+    4300584: RoofPlane
+    4300586: FacadeTexture
+    4300588: RoofPlane
+    4300590: RoofPlane
+    4300592: RoofPlane
+    4300594: RoofPlane
+    4300596: RoofPlane
+    4300598: RoofPlane
+    4300600: RoofPlane
+    4300602: RoofPlane
+    4300604: Facade
+    4300606: FacadeColor
+    4300608: Facade
+    4300610: RoofPlane
+    4300612: RoofPlane
+    4300614: Facade
+    4300616: Facade
+    4300618: Facade
+    4300620: Facade
+    4300622: Facade
+    4300624: Facade
+    4300626: Facade
+    4300628: Facade
+    4300630: Facade
+    4300632: Facade
+    4300634: Railing
+    4300636: Facade
+    4300638: FacadeTexture
+    4300640: ParkingLot
+    4300642: RoofPlane
+    4300644: RoofPlane
+    4300646: ParkingLot
+    4300648: ParkingLot
+    4300650: Parisian_Roof_Chimney
+    4300652: Parisian_Roof_Chimney
+    4300654: Parisian_Roof_Chimney
+    4300656: FacadeSets
+    4300658: Parisian_Roof_RoofCovering
+    4300660: Parisian_Roof_MansardWindows
+    4300662: FacadeSets
+    4300664: BlindFacadeGF
+    4300666: FacadeSets
+    4300668: Parisian_Roof_RoofCovering
+    4300670: Parisian_Roof_MansardWindows
+    4300672: FacadeSets
+    4300674: FacadeSets
+    4300676: BlindFacadeTextured
+    4300678: BlindFacadeGF
+    4300680: FacadeSets
+    4300682: Parisian_Roof_RoofCovering
+    4300684: Parisian_Roof_MansardWindows
+    4300686: FacadeSets
+    4300688: FacadeSets
+    4300690: Parisian_Roof_RoofTerraceFloor
+    4300692: FacadeSets
+    4300694: FacadeSets
+    4300696: FacadeSets
+    4300698: Parisian_Roof_RoofCovering
+    4300700: FacadeSets
+    4300702: FacadeSets
+    4300704: Parisian_Roof_MansardWindows
+    4300706: FacadeSets
+    4300708: FacadeSets
+    4300710: Parisian_Roof_RoofCovering
+    4300712: Parisian_Roof_MansardWindows
+    4300714: FacadeSets
+    4300716: FacadeSets
+    4300718: Parisian_Roof_RoofCovering
+    4300720: FacadeSets
+    4300722: FacadeSets
+    4300724: Parisian_Roof_MansardWindows
+    4300726: FacadeSets
+    4300728: BlindFacadeTextured
+    4300730: ParkingLot
+    4300732: RoofPlane
+    4300734: FacadeTexture
+    4300736: YardGround
+    4300738: YardGround
+    4300740: RoofPlane
+    4300742: Facade
+    4300744: RoofPlane
+    4300746: ParkingLot
+    4300748: ParkingLot
+    4300750: ParkingLot
+    4300752: ParkingLot
+    4300754: RoofPlane
+    4300756: YardGround
+    4300758: YardGround
+    4300760: YardGround
+    4300762: YardGround
+    4300764: RoofPlane
+    4300766: YardGround
+    4300768: Asphalt
+    4300770: Asphalt
+    4300772: VehicleAsset
+    4300774: Asphalt
+    4300776: VehicleAsset
+    4300778: VehicleAsset
+    4300780: Asphalt
+    4300782: VehicleAsset
+    4300784: VehicleAsset
+    4300786: VehicleAsset
+    4300788: VehicleAsset
+    4300790: VehicleAsset
+    4300792: VehicleAsset
+    4300794: Facade
+    4300796: RoofPlane
+    4300798: RoofPlane
+    4300800: Facade
+    4300802: Facade
+    4300804: RoofPlane
+    4300806: RoofPlane
+    4300808: RoofPlane
+    4300810: Facade
+    4300812: RoofPlane
+    4300814: Facade
+    4300816: Facade
+    4300818: Facade
+    4300820: Facade
+    4300822: Facade
+    4300824: Facade
+    4300826: Facade
+    4300828: Facade
+    4300830: Facade
+    4300832: Facade
+    4300834: Facade
+    4300836: Facade
+    4300838: Facade
+    4300840: Facade
+    4300842: Facade
+    4300844: Facade
+    4300846: Facade
+    4300848: Facade
+    4300850: Facade
+    4300852: Facade
+    4300854: Facade
+    4300856: Facade
+    4300858: Facade
+    4300860: Facade
+    4300862: Facade
+    4300864: Facade
+    4300866: Facade
+    4300868: Facade
+    4300870: Facade
+    4300872: Facade
+    4300874: Facade
+    4300876: Facade
+    4300878: VehicleAsset
+    4300880: VehicleAsset
+    4300882: VehicleAsset
+    4300884: VehicleAsset
+    4300886: VehicleAsset
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,874 @@
+using Cirvr.AzureInterface;
+using Microsoft.CognitiveServices.Speech;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityStandardAssets.Utility.Config;
+using UnityStandardAssets.Utility.Events;
+
+
+namespace Cirvr.ConversationManager
+{
+    /// <summary>
+    /// This class faciliates interaction between the Bot, 
+    /// the DialogSet, and the Conversation context
+    /// </summary>
+    public class ConversationManager : MonoBehaviour
+    {
+
+        private static InterviewerBot InterviewerBot;
+        private bool isPaused = false;
+
+        private object threadLocker = new object();
+        private object myLocker = new object();
+        private bool waitingForReco;
+        AzureManager azure;
+        SpeechRecognizer m_recognizer;
+        SpeechSynthesizer m_synthesizer;
+        SpeechConfig m_speechConfig;
+        private bool isSet = false, iIsSet = false;
+        GameObject InterviewerAvatar;
+
+        Dictionary<String, AudioSource> sources;
+        AudioSource Source;
+        AnimController InterviewerAnimator;
+        public string lastUtterance;
+        public Text textText;
+        public Image imageImage;
+        private bool sequenceRunning;
+
+        //Interruption vars
+        private int interruptionCount = 0;
+        //private int sampleCount;
+        SpeechRecognizer i_recognizer;
+        SpeechConfig i_speechConfig;
+        SpeechSynthesizer i_synthesizer;
+        private List<AudioClip> interruptionSounds = new List<AudioClip>();
+        //GameObject doorwaySound;
+        private bool interruptable = false, syncSwitch = true, questionDone = false, playAnimations = false;
+        private int sampleIndex = 0;
+        private bool moveWhiteBoard = false, lipsCanMove, interrupt = false, continueFromInt = false, doNotCatchInterruptions = false;
+
+        private List<int> timeStamps = new List<int>();
+
+        private static ConversationContext Context;
+        private static ConversationManager _instance;
+        public static ConversationManager Instance { get { return _instance; } }
+
+        private int questionNum;
+        string fullString = "Timestamp, Question Number, Question, Response Length, Interruptions \n";
+
+        private string responseStartTime, responseEndTime; //length of actual response
+        private string waitingStartTime, waitingEndTime; //length of pause after the question is asked and before the answer is given
+        float responseLength, pauseLength;
+        bool questionFlag, endQuestion;
+        private int index;
+
+        private void Awake()
+        {
+            if (_instance != null && _instance != this)
+            {
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                _instance = this;
+            }
+        }
+
+        private void Start()
+        {
+            imageImage.enabled = false;
+            InterviewerBot = InterviewerBot.Instance;
+            Context = ConversationContext.Instance;
+            InterviewerAvatar = GameObject.Find(ConfigInfo.envSettings.interviewer);
+            Source = InterviewerAvatar.GetComponent<AudioSource>();
+            InterviewerAnimator = InterviewerAvatar.GetComponent<AnimController>();
+            
+            m_speechConfig = SpeechConfig.FromSubscription("dc54916ff0d94e8980b8dca7d19d6a48", "westus");
+            m_speechConfig.SetSpeechSynthesisOutputFormat(SpeechSynthesisOutputFormat.Riff24Khz16BitMonoPcm);
+            m_recognizer = new SpeechRecognizer(m_speechConfig);
+            m_synthesizer = new SpeechSynthesizer(m_speechConfig, null);
+
+            //Interruption initializors
+            i_speechConfig = SpeechConfig.FromSubscription("dc54916ff0d94e8980b8dca7d19d6a48", "westus");
+            i_speechConfig.SetSpeechSynthesisOutputFormat(SpeechSynthesisOutputFormat.Riff24Khz16BitMonoPcm);
+            i_recognizer = new SpeechRecognizer(i_speechConfig);
+            i_synthesizer = new SpeechSynthesizer(i_speechConfig, null);
+            interruptionSounds.Add(Resources.Load<AudioClip>("Interruptions/DoorKnock"));
+
+            azure = Cirvr.AzureInterface.AzureManager.instance;
+            ContinuousListen();
+
+            RegisterListeners();
+            AddDialogsFromJson();
+            InitAudioSources();
+
+            questionNum = 1;
+            responseLength = pauseLength = 0;
+            index = 0;
+            endQuestion = false;
+
+
+        }
+
+        private void Update()
+        {
+            //Debug.Log(playAnimations);
+            //if (playAnimations)
+                //StartCoroutine(waitToNod());
+        }
+
+        private void InitAudioSources()
+        {
+            sources = new Dictionary<string, AudioSource>();
+            AudioSource[] srcs = FindObjectsOfType<AudioSource>();
+            foreach (AudioSource src in srcs)
+            {
+                sources.Add(src.name, src);
+            }
+
+        }
+
+        private void RegisterListeners()
+        {
+            EventSystem.current.RegisterListener<PlayerBeginInterview>(OnInterviewBegin);
+            EventSystem.current.RegisterListener<ReceivedAzureMessage>(OnReceiveAzureMessage);
+            EventSystem.current.RegisterListener<BeginDialog>(OnBeginDialog);
+            EventSystem.current.RegisterListener<EndDialog>(OnEndDialog);
+            EventSystem.current.RegisterListener<RecognizedSpeechEvent>(OnSpeechRecognized);
+            EventSystem.current.RegisterListener<ReceivedE4Data>(OnReceivedE4Data);
+            EventSystem.current.RegisterListener<PlayerEndInterview>(OnInterviewEnd);
+            EventSystem.current.RegisterListener<PauseEvent>(OnPause);
+            EventSystem.current.RegisterListener<MoveOn>(moveOn);
+            EventSystem.current.RegisterListener<MoveWhiteBoardEvent>(MoveWBQ);
+            EventSystem.current.RegisterListener<EndInterruption>(OnInterruptionEnd);
+        }
+
+        public void OnInterviewEnd(PlayerEndInterview e)
+        {
+            FillQuestionCSV();
+            SceneManager.LoadScene("MainMenu");
+        }
+
+        public void OnEndDialog(EndDialog e)
+        {
+            moveWhiteBoard = false;
+            endQuestion = true;
+            var n = DateTime.Now;
+            string milli = n.Millisecond.ToString();
+            if (milli.Trim().Length == 2)
+                milli = "0" + milli;
+            waitingStartTime = n.Hour + ":" + n.Minute + ":" + n.Second + ":" + milli;
+            
+            interruptionCount = 0;
+            Dialog currentDialog = Context.GetCurrentDialog();
+            //if (lipsCanMove == true)
+            InterviewerAnimator.StopLipAnim(ConfigInfo.envSettings.interviewer);
+
+            // Start timer for this dialog
+            // StartCoroutine(DialogTimer(currentDialog.ResponseTime, Action.REPEAT));
+
+            if (currentDialog.requireResponse == true)
+            {
+                lock (threadLocker)
+                {
+                    // Signify that it is the users turn
+                    waitingForReco = true;
+                    ContinuousListen();
+                    i_recognizer.StopContinuousRecognitionAsync().ConfigureAwait(false);
+                    interruptable = false;
+
+                }
+                StartCoroutine(WaitForAnswer());
+            }
+            else if (currentDialog.finalQuestion == true && currentDialog.requireResponse == false)
+            {
+                EventSystem.current.FireEvent(new PlayerEndInterview("string"));
+            }
+            else if (currentDialog.WBQID != null)
+            {
+                return;
+            }
+            else
+            {
+                EventSystem.current.FireEvent(new MoveOn("sting"));
+            }
+        }
+
+        public IEnumerator WaitForAnswer()
+        {
+            yield return new WaitUntil(() => waitingForReco == false);
+            Debug.Log("Ending response timer");
+            var n = DateTime.Now;
+            string milli = n.Millisecond.ToString();
+            if (milli.Trim().Length == 2)
+                milli = "0" + milli;
+            responseEndTime = n.Hour + ":" + n.Minute + ":" + n.Second + ":" + milli;
+            if (responseStartTime != "" && responseEndTime != "")
+                responseLength = (float)(ConvertTimestampToInt(responseEndTime) - ConvertTimestampToInt(responseStartTime)) / 1000.0f; //in seconds
+            if (questionFlag)
+                fullString += ", " + responseLength + ", " + interruptionCount + "\n";
+
+            waitingEndTime = responseStartTime;
+            if (waitingStartTime != "" && waitingEndTime != "")
+                pauseLength = (float)(ConvertTimestampToInt(waitingEndTime) - ConvertTimestampToInt(waitingStartTime)) / 1000.0f; //in seconds
+            Debug.Log("Pause Length: " + pauseLength + ". Response Length: " + responseLength);
+            responseStartTime = responseEndTime = waitingStartTime = waitingEndTime = "";
+            index = 0;
+            endQuestion = false;
+            EventSystem.current.FireEvent(new RecognizedSpeechEvent("Recognized Speech", lastUtterance));
+        }
+
+        private int ConvertTimestampToInt(string timeStamp) //for getting response length
+        {
+            //Bug occurring where timestamp argument would be null
+            if(timeStamp == null)
+            {
+                return 0;
+            }
+            string[] splitter = timeStamp.Split(new char[] { ':' });
+
+            int hour = Convert.ToInt32(splitter[0]);
+
+            int minute = 0;
+            if (splitter.Length > 1)
+                minute = Convert.ToInt32(splitter[1]);
+
+            int second = 0;
+            if (splitter.Length > 2)
+                second = Convert.ToInt32(splitter[2]);
+
+            int millisecond = 0;
+            if (splitter.Length > 3)
+                millisecond = Convert.ToInt32(splitter[3]);
+
+            return 3600000 * hour + 60000 * minute + 1000 * second + millisecond;
+        }
+
+        public void OnBeginDialog(BeginDialog e)
+        {
+            Dialog currentDialog = Context.GetCurrentDialog();
+            playAnimations = false;
+            //InterviewerAnimator.PlayLipMvmtAnim();
+
+            //Michael 7/15/19: Don't listen to interviewee dialog while interviewer is talking
+            m_recognizer.StopContinuousRecognitionAsync().ConfigureAwait(false);
+            //Debug.Log("continuous listen off");
+
+            //waitingForReco = false;
+            //questionDone = !questionDone;
+
+            //Turning i_rec on when applicable
+            if (currentDialog.requireResponse == false)
+            {
+                lock (myLocker)
+                    InterruptionCatcher();
+                interruptable = true;
+            }
+            else if (currentDialog.NextDialogID != null && interruptable == false)
+            {
+                if ((currentDialog.requireResponse == true &&
+                    Context.GetDialogById(currentDialog.NextDialogID).requireResponse == true))
+                {
+                    lock (myLocker)
+                        InterruptionCatcher();
+                    interruptable = true;
+                }
+            }
+            else if (currentDialog.filterType != null && interruptable == false)
+            {
+                if (currentDialog.filterType.Contains("SentimentFilter"))
+                {
+                    lock (myLocker)
+                        InterruptionCatcher();
+                    interruptable = true;
+                }
+            }
+        }
+        
+        public void DisplayWhiteBoard(string id)
+        {
+            StartCoroutine(WaitForNextQuestionHit(Context.GetCurrentDialog()));
+            int timer = Context.GetCurrentDialog().timeLimit;
+            WhiteBoardQ currentWBQ = Context.GetWBQByID(id);
+            WhiteBoardManager whiteBoardSetup = GameObject.Find("WhiteBoard").GetComponent<WhiteBoardManager>();
+            string answers = "";
+
+            if(currentWBQ.answers.Count > 1)
+            {
+                foreach(string ans in currentWBQ.answers)
+                {
+                    answers += ans;
+                }
+                whiteBoardSetup.PrepBoard(answers, currentWBQ.questionType, currentWBQ.QuestionText, currentWBQ.questionChoices[0],
+                      currentWBQ.questionChoices[1], currentWBQ.questionChoices[2], currentWBQ.questionChoices[3], currentWBQ.lastOfSet, timer, currentWBQ.questionImage);
+            }
+            else
+            {
+                Debug.Log("display whiteboard called");
+                if (currentWBQ.questionType == "MultipleChoice")
+                {
+                    whiteBoardSetup.PrepBoard(currentWBQ.answers[0], "MultipleChoice", currentWBQ.QuestionText, currentWBQ.questionChoices[0],
+                                        currentWBQ.questionChoices[1], currentWBQ.questionChoices[2], currentWBQ.questionChoices[3], currentWBQ.lastOfSet, timer, currentWBQ.questionImage);
+
+                }
+                else if (currentWBQ.questionType == "TrueFalse")
+                {
+                    whiteBoardSetup.PrepBoard(currentWBQ.answers[0], "TrueFalse", currentWBQ.QuestionText, currentWBQ.questionChoices[0], currentWBQ.questionChoices[1], "", "",
+                        currentWBQ.lastOfSet, timer, currentWBQ.questionImage);
+                }
+                else
+                {
+                    whiteBoardSetup.PrepBoard(currentWBQ.answers[0], "FillInBlank", currentWBQ.QuestionText, "", "", "", "", currentWBQ.lastOfSet, timer, currentWBQ.questionImage);
+                }
+            }
+
+        }
+
+        public void OnReceivedE4Data(ReceivedE4Data e)
+        {
+            Context.Update(e);
+        }
+
+        public IEnumerator WaitForSound(Dialog dialog, string srcName)
+        {
+            yield return new WaitUntil(() => !sources[srcName].isPlaying && !isPaused);
+
+            EndDialog dialogEnd = new EndDialog("The interviewer finished a question.", dialog);
+            EventSystem.current.FireEvent(dialogEnd);
+        }
+        public IEnumerator WaitForNextQuestionHit(Dialog dialog)
+        {
+            yield return new WaitUntil(() => moveWhiteBoard);
+
+            EndDialog dialogEnd = new EndDialog("The interviewer finished a question.", dialog);
+            EventSystem.current.FireEvent(dialogEnd);
+        }
+
+        public void OnInterviewBegin(PlayerBeginInterview e)
+        {
+            Context.SwitchDialogSet("mainDialogSet");
+            Context.SwitchWhiteBoardSet("mainWhiteBoardSet");
+            imageImage.enabled = true;
+
+            // This will retrieve and process the first dialog text and move us to the next question
+            Ask(InterviewerBot.GetFirstQuestion(Context));
+        }
+
+        public void OnReceiveAzureMessage(ReceivedAzureMessage e)
+        {
+            AzureMessage message = e.rcvdMsg;
+            Context.Update(message);
+            
+            if (Context.GetCurrentDialog().NextDialogID != null && Context.GetNextDialog().WBQID != null)
+            {
+                EventSystem.current.FireEvent(new BeginWhiteBoard("to whiteboard"));
+                //StartCoroutine(waitToTransition());
+                InterviewerAnimator.GestureToWhiteboard();
+                Ask(InterviewerBot.GetWhiteBoardQuestion(Context));
+            }
+            else
+            {
+                Ask(InterviewerBot.GetResponse(Context));
+            }
+        }
+
+        private IEnumerator PlaySoundSequence(System.Action cb, params string[] soundIDs)
+        {
+            yield return new WaitForSeconds(1.0f);
+            sequenceRunning = true;
+            PlaySequenceSound(0, soundIDs);
+
+            yield return new WaitUntil(() => !sequenceRunning);
+            cb();
+        }
+
+        private void PlaySequenceSound(int i = 0, params string[] soundIDs)
+        {
+
+            if (i >= soundIDs.Length)
+            {
+                sequenceRunning = false;
+                return;
+            }
+
+            // Get correct source and audioclip if it already exists
+            (string goName, AudioClip clip) clipInfo = Context.GetClipInfoFromSoundID(soundIDs[i]);
+
+            // If this wasn't a sound effect, we need to make audio clip on the fly
+            if (clipInfo.clip == null)
+            {
+                getAudioClipFromDialogId(soundIDs[i], clip =>
+                {
+                    if (clip == null || clipInfo.goName == null)
+                    {
+                        // Throw
+                        Debug.Log("NULL CLIP");
+                    }
+
+                    clipInfo.clip = clip;
+                    StartCoroutine(WaitForSequenceClip(() => {
+                        PlaySequenceSound(++i, soundIDs);
+                    }, clipInfo.goName, clipInfo.clip));
+                });
+            }
+            else
+            {
+                StartCoroutine(WaitForSequenceClip(() => {
+                    PlaySequenceSound(++i, soundIDs);
+                }, clipInfo.goName, clipInfo.clip));
+            }
+        }
+
+        IEnumerator WaitForSequenceClip(System.Action cb, string srcID, AudioClip clip)
+        {
+            Debug.Log(srcID);
+            // @todo Handle interuptions
+            sources[srcID].clip = clip;
+            sources[srcID].Play();
+
+            InterviewerAnimator.PlayLipMvmtAnim(srcID);
+            yield return new WaitUntil(() => !sources[srcID].isPlaying);
+            InterviewerAnimator.StopLipAnim(srcID);
+
+            cb();
+        }
+
+        private async void getAudioClipFromDialogId(string id, Action<AudioClip> cb)
+        {
+            // get dialog text from context
+            string text = Context.GetDialogById(id).DialogText;
+            string dialogSetName = Context.GetDialogSetByDialogId(id).DialogSetID;
+            string voice = dialogSetName == "receptionistDialogSet" ? "Male" : "";
+
+            SSMLSettings settings = new SSMLSettings(text, voice);
+            string ssmlText = SSMLEngine.RenderSSML(settings);
+            var result = await m_synthesizer.SpeakSsmlAsync(ssmlText);
+
+            // Checks result.
+            if (result.Reason == ResultReason.SynthesizingAudioCompleted)
+            {
+                var sampleCount = result.AudioData.Length / 2;
+                var audioData = new float[sampleCount];
+
+                for (var i = 0; i < sampleCount; ++i)
+                {
+                    audioData[i] = (short)(result.AudioData[i * 2 + 1] << 8 | result.AudioData[i * 2]) / 32768.0F;
+                }
+
+                // The default output audio format is 16K 16bit mono
+                var audioClip = AudioClip.Create("SynthesizedAudio", sampleCount, 1, 24000, false);
+                audioClip.SetData(audioData, 0);
+
+                cb(audioClip);
+            }
+            else if (result.Reason == ResultReason.Canceled)
+            {
+                var cancellation = SpeechSynthesisCancellationDetails.FromResult(result);
+                Debug.Log($"{cancellation.Reason}, {cancellation.ErrorDetails}, {cancellation.ErrorCode}");
+            }
+        }
+
+        IEnumerator waitToTransition()
+        {
+            yield return new WaitForSeconds(1f);
+            EventSystem.current.FireEvent(new BeginWhiteBoard("to whiteboard"));
+
+        }
+
+        //When next button is hit, display next question or get out of whiteboard if necassary
+        public void MoveWBQ(MoveWhiteBoardEvent sting)
+        {
+            if (Context.GetNextDialog().WBQID != null)
+            {
+                Ask(InterviewerBot.GetWhiteBoardQuestion(Context));
+                moveWhiteBoard = true;
+            }
+            else
+            {
+                EventSystem.current.FireEvent(new BeginWhiteBoard("back to chair"));
+                Ask(InterviewerBot.GetResponse(Context));
+            }
+        }
+
+        public void Ask(string text)
+        {
+            //for adding questions to the csv file
+            questionFlag = false;
+            if (text.Trim().EndsWith("?"))
+            {
+                questionFlag = true;
+            }
+            string questionText = text.Replace(",", string.Empty);
+            fullString += GetCurrentTime() + ", " + questionNum++ + ", " + questionText;
+
+            if (!questionFlag)
+            {
+                fullString += ", -----, " + interruptionCount + "\n";
+            }
+
+            if (Context.GetCurrentDialog().DialogText != null)
+            {
+                textText.text = text;
+                PlayAudio(text, Context.GetCurrentDialog().Interruption);
+                BeginDialog dialogBegin = new BeginDialog("The interviewer began a question.", Context.GetCurrentDialog());
+                EventSystem.current.FireEvent(dialogBegin);
+            }
+            if (text == Context.GetCurrentDialog().WBQID)
+            {
+                waitingForReco = true;
+                lipsCanMove = false;
+                DisplayWhiteBoard(text);
+            }
+        }
+
+
+        public string GetCurrentTime()
+        {
+            var n = DateTime.Now;
+            return n.Hour + ":" + n.Minute + ":" + n.Second;
+        }
+
+        private void FillQuestionCSV()
+        {
+            string path = "Assets/Data/Events/";
+            string name = DateTime.Now.ToString();
+            name = name.Replace("/", "-");
+            name = name.Replace(":", "_");
+            path += name + ".csv";
+            try
+            {
+                File.WriteAllText(path, fullString);
+            }
+            catch (Exception e)
+            {
+                Debug.Log("Exception trying to write question csv file: " + e);
+            }
+        }
+
+        private IEnumerator DialogTimer(int seconds, Action timesUpAction)
+        {
+            string currDialog = Context.GetCurrentDialog().DialogID;
+            yield return new WaitForSeconds(seconds);
+
+            lock (threadLocker)
+            {
+                if (waitingForReco == true && currDialog == Context.GetCurrentDialog().DialogID)
+                {
+                    waitingForReco = false;
+                    Ask("This is the times up question");
+                }
+            }
+        }
+        private void AddDialogsFromJson()
+        {
+            TopLvlArrList JsonArrs;
+            string jsonStringHolder;
+            string filePath = Path.Combine(Application.dataPath, "Data", "JSON files", "Dialog+WBQ.json");
+            if (!File.Exists(filePath))
+            {
+                Debug.LogError("File could not be located");
+                // throw
+            }
+            
+            //Use reader to read whole Json file into jsonholder string
+            using (StreamReader reader = File.OpenText(filePath))
+            {
+                jsonStringHolder = reader.ReadToEnd();
+                JsonArrs = JsonUtility.FromJson<TopLvlArrList>(jsonStringHolder);
+            }
+
+            // Add in dialog sets we just read in
+            Context.AddDialogSet(new DialogSet("mainDialogSet", "000", JsonArrs.interviewerDialogs, ConfigInfo.envSettings.interviewer));
+            Context.AddDialogSet(new DialogSet("receptionistDialogSet", "035", JsonArrs.receptionistDialogs, ConfigInfo.envSettings.receptionist));
+            Context.AddWhiteBoardSet(new WhiteBoardSet("mainWhiteBoardSet", "WB_01", JsonArrs.whiteBoardQuestions));
+            //Context.AddReceptionistSet(new Dictionary<String, Dialog>);
+
+            // Create and add in FXSet we just read in
+            Dictionary<String, AudioFX> effects = new Dictionary<string, AudioFX>();
+            foreach (AudioFX fx in JsonArrs.audioFX)
+            {
+                if ((fx.clip = Resources.Load<AudioClip>($"SoundFX/{fx.path}")) != null)
+                {
+                    effects.Add(fx.id, fx);
+                }
+            }
+            Context.AddAudioFXSet(effects);
+        }
+
+        private async void PlayAudio(string text, bool interrupt)
+        {
+
+            SSMLSettings settings = new SSMLSettings(text, "");
+            string ssmlText = SSMLEngine.RenderSSML(settings);
+
+            var result = await m_synthesizer.SpeakSsmlAsync(ssmlText);
+
+            // Checks result.
+            if (result.Reason == ResultReason.SynthesizingAudioCompleted)
+            {
+                var sampleCount = result.AudioData.Length / 2;
+                var audioData = new float[sampleCount];
+
+                for (var i = 0; i < sampleCount; ++i)
+                {
+                    audioData[i] = (short)(result.AudioData[i * 2 + 1] << 8 | result.AudioData[i * 2]) / 32768.0F;
+                }
+
+                // The default output audio format is 16K 16bit mono
+                var audioClip = AudioClip.Create("SynthesizedAudio", sampleCount, 1, 24000, false);
+                audioClip.SetData(audioData, 0);
+
+                // Maybe add a parameter for time, or just use playScheduled
+                if (interrupt)
+                {
+                    StartCoroutine(PlaySoundSequence(() => {
+                        EndInterruption interruptionEnd = new EndInterruption("The interviewer finished a question.", Context.GetCurrentDialog());
+                        EventSystem.current.FireEvent(interruptionEnd);
+                    }, "knock1", "035", "034"));
+                } else
+                {
+                    sources[ConfigInfo.envSettings.interviewer].clip = audioClip;
+                    sources[ConfigInfo.envSettings.interviewer].Play();
+                    InterviewerAnimator.PlayLipMvmtAnim(ConfigInfo.envSettings.interviewer);
+                    StartCoroutine(WaitForSound(Context.GetCurrentDialog(), ConfigInfo.envSettings.interviewer));
+                }
+            }
+            else if (result.Reason == ResultReason.Canceled)
+            {
+                var cancellation = SpeechSynthesisCancellationDetails.FromResult(result);
+            }
+        }
+
+        private void OnInterruptionEnd(EndInterruption e)
+        {
+            InterviewerAnimator.StopLipAnim(ConfigInfo.envSettings.interviewer);
+            PlayAudio(e.dialog.DialogText, false);
+        }
+
+        IEnumerator waitToNod()
+        {
+            yield return new WaitForSeconds(3f);
+            InterviewerAnimator.ListeningAnim("Nod");
+        }
+
+        private async void ContinuousListen()
+        {
+            await m_recognizer.StartContinuousRecognitionAsync().ConfigureAwait(false);
+
+            if (isSet == false)
+            {
+                // Subscribes to events.
+                m_recognizer.Recognizing += (s, e) =>
+                {
+                    playAnimations = true;
+                    if (index++ == 0 && endQuestion)
+                    {
+                        Debug.Log("Ending pause timer and starting response timer");
+                        var n = DateTime.Now;
+                        string milli = n.Millisecond.ToString();
+                        if (milli.Trim().Length == 2)
+                            milli = "0" + milli;
+                        responseStartTime = n.Hour + ":" + n.Minute + ":" + n.Second + ":" + milli;
+                    }
+                    //Debug.Log($"RECOGNIZING: Text={e.Result.Text}");
+                };
+                m_recognizer.Recognized += (s, e) =>
+                {
+                    var result = e.Result;
+                    //Debug.Log($"RECOGNIZED: Text={e.Result.Text}");
+                    if (result.Reason == ResultReason.RecognizedSpeech)
+                    {
+                        lock (threadLocker)
+                        {
+                            // Only accept the interviewees recognized text if it was their turn to speak
+                            if (waitingForReco == true && !String.IsNullOrEmpty(result.Text))
+                            {
+                                lastUtterance = result.Text;
+                                waitingForReco = false;
+                            }
+                        }
+                    }
+                };
+
+                m_recognizer.Canceled += (s, e) =>
+                {
+                    //Debug.Log($"\n    Recognition Canceled. Reason: {e.Reason.ToString()}, CanceledReason: {e.Reason}");
+                };
+
+                m_recognizer.SessionStarted += (s, e) =>
+                {
+                    //Debug.Log("\n    Session started event.");
+                };
+
+                m_recognizer.SessionStopped += (s, e) =>
+                {
+                    //Debug.Log("\n    Session stopped event.");
+                };
+            }
+            isSet = true;
+        }
+
+        private async void InterruptionCatcher()
+        {
+            await i_recognizer.StartContinuousRecognitionAsync().ConfigureAwait(false);
+            //Debug.Log("Interruption catcher on");
+            int Index = 0;
+            if (iIsSet == false)
+            {
+                i_recognizer.Recognizing += (s, e) =>
+                {
+                    if (Index++ == 0)
+                        responseStartTime = DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second + ":" + DateTime.Now.Millisecond;
+
+                    //Debug.Log($"RECOGNIZING: Text={e.Result.Text}");
+                };
+
+                i_recognizer.Recognized += (s, e) =>
+                {
+                    var result = e.Result;
+                    //Debug.Log($"RECOGNIZED: Text={e.Result.Text}");
+
+                    if (result.Reason == ResultReason.RecognizedSpeech)
+                    {
+                        lock (threadLocker)
+                        {
+                            // Only accept the interviewees recognized text if it was their turn to speak
+                            if (!String.IsNullOrEmpty(result.Text) && !doNotCatchInterruptions)//waitingForReco == false && )
+                            {
+                                interruptionCount++;
+                                Debug.Log("i count " + interruptionCount);
+                            }
+                        }
+                    }
+                };
+
+                i_recognizer.Canceled += (s, e) =>
+                {
+                    //Debug.Log($"\n    Recognition Canceled. Reason: {e.Reason.ToString()}, CanceledReason: {e.Reason}");
+                };
+
+                i_recognizer.SessionStarted += (s, e) =>
+                {
+                    //Debug.Log("\n    Session started event.");
+                };
+
+                i_recognizer.SessionStopped += (s, e) =>
+                {
+                    //Debug.Log("\n    Session stopped event.");
+                };
+            }
+            iIsSet = true;
+        }
+
+        public void OnSpeechRecognized(RecognizedSpeechEvent e)
+        {
+            azure.AnalyzeUtterace(e.utterance);
+        }
+
+        private void OnDestroy()
+        {
+            m_synthesizer.Dispose();
+            m_recognizer.Dispose();
+            i_recognizer.Dispose();
+            i_synthesizer.Dispose();
+
+        }
+        public void OnPause(PauseEvent o)
+        {
+            if (o.audioPause)
+            {
+                isPaused = true;
+                Source.Pause();
+            }
+            else
+            {
+                isPaused = false;
+                Source.UnPause();
+            }
+        }
+        public void moveOn(MoveOn hello)
+        {
+            Ask(InterviewerBot.GetResponse(Context));
+        }
+
+        //sets timestamps for lip movement pause
+        /* private void DynamicLipAnim(float[] audioData)
+        {
+            //Threshold for audio
+            float threshold = .05f;
+            //var for value to be tested against thresholds
+            float i, start = 0f, diff = 0f;
+            int k;
+            bool foundStart = false;
+            //Clear global vars
+            timeStamps.Clear();
+            sampleIndex = 0;
+
+            //if argument actually exists do something
+            if (audioData.Length > 0)
+            {
+                //Parse through clip to determine the time stamps
+                for (k = 0; k < audioData.Length; k++)
+                {
+                    audioData[k] = Math.Abs(audioData[k]);
+                    i = audioData[k];
+                    //Debug.Log("i: " + i + "k: " + k);
+                    //if we have not found beginning of silence yet, add to list
+                    if (foundStart == false && i <= threshold)
+                    {
+                        start = i;
+                        timeStamps.Add(k);
+                        diff = start - audioData[k+1];
+                        foundStart = !foundStart;
+                    }
+                    //if we have found beginning, start looking for end
+                    else if(foundStart == true && i > (threshold) && diff < (start - i))
+                    {
+                        Debug.Log("diff" + diff);
+                        timeStamps.Add(k);
+                        foundStart = !foundStart;
+                    }
+                }
+            }
+            return; 
+        }*/
+
+        [Serializable]
+        public class TopLvlArrList
+        {
+            public List<Dialog> interviewerDialogs;
+            public List<Dialog> receptionistDialogs;
+            public List<WhiteBoardQ> whiteBoardQuestions;
+            public List<AudioFX> audioFX;
+        }
+    }
+
+    // @todo Abstract these to an audio manager class, they don't belong here
+    public class AudioInfo
+    {
+        public AudioClip Clip { get; set; }
+        public AudioSource Src { get; set; }
+        // we can add more params like volume, SSML stuff, etc...
+
+        public AudioInfo(AudioSource src, AudioClip clip)
+        {
+            this.Src = src;
+            this.Clip = clip;
+        }
+    }
+
+    [Serializable]
+    public class AudioFX
+    {
+        public string id;
+        public string path;
+        public string source;
+        public AudioClip clip;
+    }
+}

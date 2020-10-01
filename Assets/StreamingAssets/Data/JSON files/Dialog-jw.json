@@ -1,0 +1,19 @@
+{
+	"interviewerDialogs": [
+    {
+      "DialogID": "000",
+      "DialogText": "Please tell me more about yourself",
+      "dynamicParams": [],
+      "staticParams": [
+        
+      ],
+      "alternates": [
+       
+      ],
+      "requireResponse": false,
+      "userInterruptionEnabled": false,
+      "section":  "Closing"
+
+    }
+	]
+}

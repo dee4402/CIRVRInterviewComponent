@@ -1,0 +1,328 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  Deep Exploration 5.5 5.5.3.2642 Release
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl Phares
+Ka 0 0 0
+Kd 0.305882 0.305882 0.305882
+Ks 0.252353 0.252353 0.252353
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Pneus
+Ka 0 0 0
+Kd 0.180392 0.180392 0.180392
+Ks 0.045098 0.045098 0.045098
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Jantes
+Ka 0 0 0
+Kd 0.34902 0.34902 0.34902
+Ks 0.205922 0.205922 0.205922
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Carrosserie_benne
+Ka 0 0 0
+Kd 0.227451 0.243137 0.360784
+Ks 0.153529 0.164118 0.243529
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Plastiques_noir
+Ka 0 0 0
+Kd 0.227451 0.227451 0.227451
+Ks 0.0454902 0.0454902 0.0454902
+illum 2
+Ns 64
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Carrosserie
+Ka 0 0 0
+Kd 0.227451 0.243137 0.360784
+Ks 0.153529 0.164118 0.243529
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Chromes
+Ka 0 0 0
+Kd 0.32549 0.32549 0.32549
+Ks 0.32549 0.32549 0.32549
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Vitres
+Ka 0 0 0
+Kd 0.168627 0.215686 0.247059
+Ks 0.168627 0.215686 0.247059
+illum 2
+Ns 16
+d 0.16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Carrosserie_Capot
+Ka 0 0 0
+Kd 0.227451 0.243137 0.360784
+Ks 0.153529 0.164118 0.243529
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Feux_rouges_arri_re
+Ka 0 0 0
+Kd 0.419608 0.137255 0.129412
+Ks 0.0839216 0.027451 0.0258824
+illum 2
+Ns 64
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Dessous
+Ka 0 0 0
+Kd 0.254902 0.254902 0.254902
+Ks 0.752941 0.752941 0.752941
+illum 2
+Ns 8
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Phares_vitres
+Ka 0 0 0
+Kd 0.619608 0.619608 0.619608
+Ks 0.316 0.316 0.316
+illum 2
+Ns 16
+d 0.4
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Feux_blanc_arri_re
+Ka 0 0 0
+Kd 0.486275 0.486275 0.486275
+Ks 0.0972549 0.0972549 0.0972549
+illum 2
+Ns 64
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Clignotants_avant
+Ka 0 0 0
+Kd 0.658824 0.380392 0.192157
+Ks 0.131765 0.0760784 0.0384314
+illum 2
+Ns 64
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Carrosserie_portes_avant
+Ka 0 0 0
+Kd 0.227451 0.243137 0.360784
+Ks 0.153529 0.164118 0.243529
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Poignets_de_portes
+Ka 0 0 0
+Kd 0.435294 0.435294 0.435294
+Ks 0.435294 0.435294 0.435294
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl R_tros_chrom_
+Ka 0 0 0
+Kd 0.435294 0.435294 0.435294
+Ks 0.348235 0.348235 0.348235
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Mirroirs_R_tros
+Ka 0 0 0
+Kd 0.435294 0.435294 0.435294
+Ks 0.435294 0.435294 0.435294
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Carrosserie_porte_arri_re
+Ka 0 0 0
+Kd 0.227451 0.243137 0.360784
+Ks 0.153529 0.164118 0.243529
+illum 2
+Ns 16
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Explorer_Default
+Ka 0.117647 0.117647 0.117647
+Kd 0.752941 0.752941 0.752941
+Ks 0.752941 0.752941 0.752941
+illum 2
+Ns 8
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
