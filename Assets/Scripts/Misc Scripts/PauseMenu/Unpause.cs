@@ -9,18 +9,18 @@ public class Unpause : MonoBehaviour
     GameObject pause;
     private WebCam webCam;
     private E4ClientManager e4ClientManager;
-    private TobiiGazeLoggingNoHMD gaze;
 
     void Start()
     {
         pause = GameObject.Find("PauseScreen");
         menuOptions = GameObject.FindGameObjectsWithTag("Paused");
-        gaze = GameObject.Find("GazeObject").GetComponent<TobiiGazeLoggingNoHMD>();
+        webCam = GameObject.Find("WebCam").GetComponent<WebCam>();
+      
     }
 
     public void hidePaused()
     {
-        gaze.isPaused = false; //to resume taking pictures
+        webCam.isPaused =  false; //to resume taking pictures
 
         Time.timeScale = 1f;
         pause.SetActive(false);

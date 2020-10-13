@@ -5,19 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Interview.unity
     guid: d74e33a11bc9f9d44aa9a05ec7ed6694
-  - enabled: 1
-    path: Assets/Scenes/Easter Island.unity
-    guid: 8d6fb67ecb2459d4eaf90600a4b390f6
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/LoadingScene.unity
     guid: 32041b0fc3e54e1428342a27e78a41e0
   m_configObjects:

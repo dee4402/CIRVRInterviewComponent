@@ -42,7 +42,6 @@ namespace Cirvr.ConversationManager
         // Inspector variables
         public string lastUtterance;
         //public Text textText, userText;
-        public TMPro.TextMeshProUGUI subtitlesText;
         //public Image imageImage;
 
         private bool questionRepeated = false;
@@ -94,7 +93,6 @@ namespace Cirvr.ConversationManager
         private bool playInterruption = false;
         private float temp = 1f;
         private Image recordingIndicator;
-        public TMPro.TextMeshProUGUI sphereText;
         private GameObject sphereIndicatorForFove;
         private bool gotQuestion, waitingForQuestion;        
         private bool ViveTriggerHit = false;
@@ -105,7 +103,6 @@ namespace Cirvr.ConversationManager
         private bool recognizedQuestion = false;
         private Stopwatch questionStopWatch;
 
-        public TMPro.TextMeshProUGUI instructionText;
 
         //Dictionairy to keep track of interview content D<DialogID, D<ColumnHeaderForCSV, content>>
         private List<string[]> recentInteraction = new List<string[]>();
@@ -162,8 +159,8 @@ namespace Cirvr.ConversationManager
             InterviewerAnimator = InterviewerAvatar.GetComponent<AnimController>();
 
             // Initialize stuff
-            m_speechConfig = SpeechConfig.FromSubscription("ADD PRIMARY KEY HERE ", "ADD LOCATION NAME HERE (E.g. westus2)");
-            synthSpeechConfig = SpeechConfig.FromSubscription("ADD PRIMARY KEY HERE", "ADD LOCATION NAME HERE ");
+            m_speechConfig = SpeechConfig.FromSubscription("3aa0f09d4c184d0ca6abdcd736043c5f", "westus2");
+            synthSpeechConfig = SpeechConfig.FromSubscription("3aa0f09d4c184d0ca6abdcd736043c5f", "westus2");
             synthSpeechConfig.SetSpeechSynthesisOutputFormat(SpeechSynthesisOutputFormat.Riff24Khz16BitMonoPcm);
            // m_recognizer = new SpeechRecognizer(m_speechConfig);
 
@@ -324,12 +321,7 @@ namespace Cirvr.ConversationManager
                 }
             }
             
-            if(!SettingsInfo.subtitles) {
-                subtitlesText.enabled = false;
-            }
-            else {
-                subtitlesText.enabled = true;
-            }
+          
         }
 
       
@@ -424,18 +416,8 @@ namespace Cirvr.ConversationManager
         }
 
         private void ActivateRecordingIndicator(bool activate, string inputText = "Action Button") {
-            TMPro.TextMeshProUGUI indicatorText = new TMPro.TextMeshProUGUI();
-            string text = $"Press {inputText} to submit";
-            if(SettingsInfo.VR == "none") {
-                recordingIndicator.gameObject.SetActive(activate);
-                indicatorText = recordingIndicator.GetComponentInChildren<TMPro.TextMeshProUGUI>();
-            }
-            else {
-                sphereIndicatorForFove.transform.parent.gameObject.SetActive(activate);
-                indicatorText = sphereIndicatorForFove.transform.parent.gameObject.GetComponentInChildren<TMPro.TextMeshProUGUI>();//sphereText;
-            }
-
-            indicatorText.text = text;
+           
+         
         }
 
         /// <summary>
@@ -490,7 +472,6 @@ namespace Cirvr.ConversationManager
             interruptionCount = 0;
             Dialog currentDialog = Context.GetCurrentDialog();
 
-            subtitlesText.text = "";
 
             //starts timer stuff for handling pauses in sentences
             repeatStopWatch.Start();
@@ -589,14 +570,7 @@ namespace Cirvr.ConversationManager
             SSMLSettings settings = new SSMLSettings(text, voice);
             string ssmlText = SSMLEngine.RenderSSML(settings, 0.5f);
         
-            if(subtitlesText != null && SettingsInfo.subtitles)
-            {
-                subtitlesText.text = text;
-            }
-            else if(subtitlesText != null && !SettingsInfo.subtitles)
-            {
-                subtitlesText.text = "";
-            }
+           
             using (SpeechSynthesizer newSynth = new SpeechSynthesizer(synthSpeechConfig, null))
             {
                 var result = await newSynth.SpeakSsmlAsync(ssmlText);

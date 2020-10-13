@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections.Generic;
-using System.Runtime.Remoting.Messaging;
 using Fove.Managed;
 
 [RequireComponent(typeof(Camera))]

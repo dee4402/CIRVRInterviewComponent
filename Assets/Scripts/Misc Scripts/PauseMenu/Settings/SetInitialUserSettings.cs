@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 /* Messy script that sets the initial settings */
 
@@ -10,8 +9,7 @@ public class SetInitialUserSettings : MonoBehaviour
 {
     public Slider masterSlider, voiceSlider, ambientSlider, brightnessSlider, qualitySlider, subtitleSize;
     public Toggle fullscreen, subtitles;
-    public TMPro.TextMeshProUGUI subtitlesDisplayText, subtitlesText;
-    public TMP_Dropdown resolution;
+   
 
     void Start()
     {
@@ -31,11 +29,7 @@ public class SetInitialUserSettings : MonoBehaviour
         subtitles.isOn = SettingsInfo.subtitles;
         qualitySlider.value = SettingsInfo.qualityLevel;
         QualitySettings.SetQualityLevel(SettingsInfo.qualityLevel);
-        subtitlesDisplayText.fontSize = SettingsInfo.subtitlesSize;
-        if(subtitlesText != null)
-        {
-            subtitlesText.fontSize = SettingsInfo.subtitlesSize;
-        }
+       
 
         SetResolutionBasedOnINI();
     }

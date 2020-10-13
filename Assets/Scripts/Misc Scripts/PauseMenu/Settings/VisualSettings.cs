@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using System.Linq;
 
 /*
@@ -14,7 +13,6 @@ public class VisualSettings : MonoBehaviour
     //UI variables
     public Toggle fullscreen;
     public Slider brightness;
-    public TMP_Dropdown resolution;
     private Button backButton;
     public Transform settingsSelection;
     public Slider qualitySlider;
@@ -35,7 +33,6 @@ public class VisualSettings : MonoBehaviour
         //Listeners for each UI element
         backButton.onClick.AddListener(delegate {HandleBackButton();});
         fullscreen.onValueChanged.AddListener(delegate {ToggleValueChanged(fullscreen.isOn);});
-        resolution.onValueChanged.AddListener(delegate {ChangeResolution(resolution.options);});
         brightness.onValueChanged.AddListener(delegate {ChangeBrightness();});
         qualitySlider.onValueChanged.AddListener(delegate {ChangeQuality();});
     }
@@ -58,22 +55,12 @@ public class VisualSettings : MonoBehaviour
         fullscreen.isOn = SettingsInfo.fullscreen;
         brightness.value = SettingsInfo.brightness;
         qualitySlider.value = SettingsInfo.qualityLevel;
-        GoThroughDropdown(resolution, SettingsInfo.resolution);
     }
 
     // TODO: this function can be made generic for dropdowns in other pages
     // This function is used to check the values in a dropdown based on the 
     // names of each option and what option you want to check for
-    private void GoThroughDropdown(TMPro.TMP_Dropdown dropdownToParse, string comparitor)
-    {
-        for(int i = 0; i < dropdownToParse.options.Count(); i++)
-        {
-            if(dropdownToParse.options[i].text == comparitor)
-            {
-                dropdownToParse.value = i;
-            }
-        }
-    }
+   
 
     //Function called from static class to reset game settings via current ini settings
     public void ResetSettings()
@@ -144,21 +131,5 @@ public class VisualSettings : MonoBehaviour
         RenderSettings.ambientIntensity = brightness.value;
     }
 
-    //Change resolution based on Dropdown chosen
-    private void ChangeResolution(List<TMP_Dropdown.OptionData> temp)
-    {
-        SettingsInfo.writtenToINI = false;
-        for (int i = 0; i < temp.Count; i++)
-        {
-            if(resolution.value == i)
-            {
-                SettingsInfo.resolution = temp[i].text;
-            }
-        }
-        int width, height;
-        var widthAndHeight = SettingsInfo.resolution.Split('x');
-        int.TryParse(widthAndHeight[0], out width);
-        int.TryParse(widthAndHeight[1], out height);
-        Screen.SetResolution(width, height, SettingsInfo.fullscreen);
-    }
+   
 }

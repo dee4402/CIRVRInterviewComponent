@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility.Events;
-using Tobii.Gaming;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
@@ -214,7 +213,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             overlay.planeDistance = .5f;
             standingCam.gameObject.GetComponent<AudioListener>().enabled = false;
             seatedCam.gameObject.GetComponent<AudioListener>().enabled = true;
-            TobiiAPI.SetCurrentUserViewPointCamera(seatedCam);
         }
         
         private void Stand()
@@ -228,7 +226,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             rightSide.enabled = false;
             standingCam.gameObject.GetComponent<AudioListener>().enabled = true;
             seatedCam.gameObject.GetComponent<AudioListener>().enabled = false;
-            TobiiAPI.SetCurrentUserViewPointCamera(standingCam);
         }
         
         private void FixedUpdate()
