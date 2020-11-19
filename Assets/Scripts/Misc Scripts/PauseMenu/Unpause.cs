@@ -8,7 +8,6 @@ public class Unpause : MonoBehaviour
     GameObject[] menuOptions;
     GameObject pause;
     private WebCam webCam;
-    private E4ClientManager e4ClientManager;
 
     void Start()
     {

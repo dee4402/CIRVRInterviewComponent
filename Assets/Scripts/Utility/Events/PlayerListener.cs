@@ -50,7 +50,6 @@ namespace UnityStandardAssets.Utility.Events
                 interviewerAnim.SetTrigger("exitRoom");
 
                 // Notify server of event (just for testing purposes)
-                ClientSocketManager.SetSendMsg("The user exited the interview room.");
             }
         }
     }

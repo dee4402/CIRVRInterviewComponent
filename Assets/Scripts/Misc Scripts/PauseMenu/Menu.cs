@@ -9,7 +9,6 @@ public class Menu : MonoBehaviour
     GameObject pause;
     //bool mouseInvis = true;
     private WebCam webCam;
-    private E4ClientManager e4ClientManager;
 
     // Start is called before the first frame update
     void Start()

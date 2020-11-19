@@ -4,13 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityStandardAssets.Utility.Config;
 using UnityStandardAssets.Utility.Events;
 using System.Diagnostics;
-using UnityEngine.Networking;
-using System.Linq;
 
 namespace Cirvr.ConversationManager
 {
@@ -145,9 +142,6 @@ namespace Cirvr.ConversationManager
             //Circle that changes color when user hits space
             recordingIndicator = GameObject.Find("RecordingIndicator").GetComponent<Image>();
             recordingIndicator.gameObject.SetActive(false);
-
-            sphereIndicatorForFove = GameObject.Find("VRRecordingIndicator");
-            sphereIndicatorForFove.transform.parent.gameObject.SetActive(false);
 
             
             // Get refs to our singletons
